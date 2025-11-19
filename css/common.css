@@ -1,0 +1,81 @@
+/* 共用 */
+.damion-regular {
+    font-family: "Damion", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.container {
+    box-sizing: border-box;
+    border: 5px solid red;
+    max-width: 1280px;/* TODO:測試的螢幕小於1920會壞掉，所以先用筆電的預設 */
+    height: 100%;/* 讓 container 繼承 navbar 的高度 */
+    margin: 0 auto;
+    position: relative;
+}
+h2, h3 {
+    font-family: "Noto Sans TC";
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2B4C7C;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.44em;
+    padding: 1.5em;
+    margin: 1em;
+}
+h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.28em;
+    padding: 0.2em;
+    line-height: 2em ;
+}
+.second-p, .normal-p {
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    color: black;
+    letter-spacing: 0.24em;
+    padding: 0.2em;
+}
+.normal-p {
+    font-size: 24px;
+    line-height: 2em ;
+    margin: 1em 4em 1em 4em;
+    /* text-indent: 2.5em; */
+}
+.normal_btn {
+    width: 130px;
+    height: 50px;
+    font-family: "Noto Sans TC";
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: #2B4C7C;
+    border-radius: 20px;
+    letter-spacing: 0.11em;
+    padding: 0.12em;
+    margin: 0 2% 1% 2%;
+    cursor: pointer;
+    text-align: center;
+}
+.normal_btn:hover {
+    background: #EE9F30;
+    border: #EE9F30;
+    transition: border 0.3s, background 0.3s;
+}
+#news h2{
+    background-image: url(../img/blob_green.png);
+    background-size: 9.5% auto;
+    background-repeat: no-repeat;
+    background-position: left 45% center;
+}
+[class*="smbg"] {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}

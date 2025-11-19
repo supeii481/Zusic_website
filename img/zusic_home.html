@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zusic租樂趣-首頁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #C0CBDC; 
+            width: 100%;
+            height: 120px;      /* #FIXME:跟mockup不一樣 */
+            position: fixed;        /* 固定在上方 */
+            top: 0;
+            left: 0;
+            display: flex; /* 讓內容容易水平、垂直置中 */
+            align-items: flex-end;      /*內容垂直位置 */
+            justify-content: center; /* 左右分布：logo在左、nav在右或中間 */
+            /*padding: 0 125px;    #TODO: */
+        }
+        .header_logo img {
+            height: 120px;     /* #FIXME:跟mockup不一樣 */
+            justify-content: left;
+        }
+        nav {
+            /* flex: 1;                讓 nav 占滿中間區域 */
+            text-align: center;     /* 內容置中 */
+
+        }
+        nav a {
+            text-decoration: none;
+            color: #2B4C7C;
+            font-size: 20px;
+            margin: 24px;
+            font-family: Noto Sans TC;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #EE9F30;
+            border-bottom: 3px solid #EE9F30;
+        }
+        .header_icon {
+            justify-content: right;
+            align-items: flex-start;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="#"><img src="../圖片/Zusic_logo.png" alt="Zusic_logo" title="Zusic租樂趣"></a>
+        </div>
+        <nav>
+            <a href="#">關於租樂趣</a>
+            <a href="#">樂器租借</a>
+            <a href="#">單日快速租借專區</a>
+            <a href="#">服務據點</a>
+            <a href="#">常見問題</a>
+        </nav>
+        <div class="header_icon">
+            <a href="#"><img src="../圖片/member_before.png" alt="會員登入" title="login"></a>
+            <a href="#"><img src="../圖片/cart_before.png" alt="購物車" title="cart"></a>
+        </div>
+    </header>
+    <section>
+        
+    </section>
+</body>
+</html>

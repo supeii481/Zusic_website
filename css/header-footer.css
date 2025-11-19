@@ -1,0 +1,114 @@
+/* header nav */
+.navbar {
+    background-color: #C0CBDC;
+}
+.header_logo {
+    height: 120px;/* ?? */
+}
+.header_logo img {
+    height: 100%;
+}
+header nav {
+    position: absolute;
+    top: 60%;
+    left: 18%; /*?? */
+}
+nav ul {
+    white-space: nowrap; /* 防止導覽列項目換行 */
+}
+header nav li {
+    display: inline-block;
+}
+nav li a {
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B4C7C;
+    letter-spacing: 0.12em;/* 字距為字體大小 (20px) 的 12% (即 2.4px) */
+    margin: 0 24px;
+}
+nav li a:hover {
+    color: #EE9F30;
+    border-bottom: 3px solid #EE9F30;
+    padding-bottom: 4px;
+    transition: border 0.3s, color 0.3s; /*慢點變色 */
+}
+.header_icon {
+    font-size: 25px;
+    color: #2B4C7C;
+    display: flex;
+    position: absolute;
+    top: 8%;/* ?? */
+    left: 90%;/* ?? */
+}
+.user_icon, .cart_icon {
+    padding: 0.5em;
+}
+.user_icon:hover, .cart_icon:hover {
+    color: #EE9F30;
+    box-shadow: 0 0 0 3px #EE9F30;/* 用 box-shadow 取代 border才不用有flexbox因尺寸變化產生抖動問題  */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, color 0.3s;
+}
+/* footer nav */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    vertical-align: middle;
+}
+footer .navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+footer nav {
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    color:#2B4C7C;
+    letter-spacing: 0.12em;
+    margin: 1em;
+}
+.footer_logo {
+    height: 110px;/* ?? */
+    position: absolute;
+    left: 50%;
+}
+.footer_logo img {
+    height: 100%;
+}
+.footer_icon { 
+    font-size: 25px;
+    color: #2B4C7C;
+    display: flex;
+    position: absolute;
+    right: 0.5em;
+}
+.map_icon, .ig_icon, .fb_icon {
+    padding: 0.5em;
+}
+.map_icon:hover, .ig_icon:hover, .fb_icon:hover {
+    color: #EE9F30;
+    box-shadow: 0 0 0 3px #EE9F30;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, color 0.3s;
+}
+.footerbar {
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    color: white;
+    background-color: #2B4C7C;
+    letter-spacing: 0.12em;
+    height: 60px;
+}
+.footerbar .container {
+    text-align: center;
+}
+.footerbar .container p {
+    line-height: 1.4;
+}

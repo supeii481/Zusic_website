@@ -1,0 +1,128 @@
+/* about */
+.about_headerbanner_smbg {
+    background-image: url("../img/about_us-img/about_us-bg.jpg");
+}
+#brand h2, #about h2 {
+    background-image: url(../img/about_us-img/blob_brown.png);
+    background-size: 9.5% auto;
+    background-repeat: no-repeat;
+    background-position: left 45% center;
+}
+#brand {
+    margin-top: 5em;
+}
+#brand h2 {
+    background-image: url(../img/about_us-img/blob_brown.png);
+    background-size: 9.5% auto;
+    background-repeat: no-repeat;
+    background-position: right 45% center;
+}
+.content_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.content_wrap img, .content_wrap p {
+    box-sizing: border-box;
+    width: 50%;
+    object-fit: contain;
+}
+#about p, #brand img ,#brand p {
+    margin-right: 1em;
+}
+#about img, #brand p, #about p {
+    margin-left: 1em;
+}
+.watermark1 {
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    max-width: 30%;
+}
+.watermark2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-30deg);
+}
+/* promise */
+.promise {
+    height: 280px;/* ?? */
+    column-gap: 2em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.blob4 {
+    background-image: url(../img/about_us-img/blob4.png);
+}
+/* contact */
+#contact {
+    background-image: url("../img/about_us-img/form-bg.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden;
+    
+}
+#contact .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 1em;
+}
+.contact_box {
+    border-radius: 20px;
+    width: 40%;
+    margin: 3em;
+    padding: 2em 2em 0 2em;
+    /* From https://css.glass */
+    background: rgba(238, 159, 48, 0.28);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    border: 1px solid rgba(238, 159, 48, 0.16);
+}
+article h2 {
+    margin: 0;
+    width: 180px;
+    border-bottom: 3px solid #2B4C7C;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-self: center;
+    flex-wrap: nowrap;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+.form-group {
+    margin: 0.5em 0;
+    width: 100%;
+}
+.form-group label {
+    display: block;
+    font-size: 25px; /* 調整 label 文字大小 */
+    color: #2B4C7C;
+    margin-bottom: 0.5em; /* 增加標籤與輸入框間距 */
+}
+.form-group input, textarea {
+    width: 100%;
+    display: block;
+    font-size: 25px; 
+    color: #2B4C7C;
+    margin-bottom: 0.5em; /* 增加標籤與輸入框間距 */
+}
+.watermark3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 30%;
+}

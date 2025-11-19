@@ -1,0 +1,316 @@
+/* header banner */
+.home_headerbanner_bg {
+    height: 500px;/* ?? */
+    background-image: url(../img/home_banner-bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden; /* 確保超出容器的圖片不會顯示滾動條 */
+}
+.home_banner_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;/* 水平置中 (主軸) */
+    align-items: center;/* 垂直置中 (交叉軸) */
+    background-image: url("../img/home_banner-dec.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom 20%;
+    overflow: hidden;
+}
+.home_bannertext {
+    font-family: "Noto Sans TC";
+    font-size: 35px;
+    font-weight: bold;
+    color: #EE9F30;
+    letter-spacing: 0.12em;
+    margin-top: -8%;
+}
+.home_bannertext p {
+    padding: 2% 0;
+}
+.home_bannertext :last-child{
+    text-indent: 1em; /* 縮排 */
+    font-size: 38px;
+}
+.home_bannerpic {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.home_bannerpic img {
+    position: absolute;  /*讓每張圖片都能自由定位 */
+    height: auto;
+    object-fit: cover; /* 讓圖片不變形 */
+}
+.home_bannerpic :first-child {
+    width: 110px;
+    left: 6%;
+    bottom: 5%;
+}
+.home_bannerpic :nth-child(2) {
+    width: 390px;
+    left: 20%;
+    top: 5%;
+}
+.home_bannerpic :nth-child(3) {
+    width: 200px;
+    right: -1%;
+    top: 0;
+    transform: rotate(15deg);
+} 
+.home_bannerpic :last-child {
+    width: 120px;
+    right: 3%;
+    bottom: 4%;
+} 
+/* news */
+.home_newscard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 1em;
+}
+.news1, .news2, .news3 {
+    font-family: "Noto Sans TC";
+    font-size: 25px;width: 32%;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3%;/* wrap間的gap */
+    padding: 1em 0 1em 0;
+}
+.news_wrap1 p {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-right: 0.5em;
+}
+.news_wrap3 img {
+    width: 80%;
+    margin: 5% 10%;
+}
+.news1 {
+    background-color: #F4E8EE;
+    color: #A83774;
+    a {
+        background-color: #A83774;
+    }
+    img {
+        border-radius: 20px;
+        box-shadow: 2px 4px 15px 1px rgba(168, 55, 116, 0.3);
+    }
+}
+.news2 {
+    background-color: #C0E8FD;
+    color: #2C7DBD;
+    a {
+        background-color: #2C7DBD;
+    }
+    img {
+        border-radius: 20px;
+        box-shadow: 2px 4px 15px 1px rgba(44, 125, 189, 0.3);
+    }
+}
+.news3 {
+    background-color: #EDFDF1;
+    color: #4FE16F;
+    a {
+        background-color: #4FE16F;
+    }
+    img {
+        border-radius: 20px;
+        box-shadow: 2px 4px 20px 1px rgba(79, 225, 111, 0.2);
+    }
+}
+.more_btnwrap a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* hot */
+#home_hotinstrument {
+    background-image: url(../img/home_hot-bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+#home_hotinstrument h2{
+    background-image: url(../img/blob_purple.png);
+    background-size: 9.5% auto;
+    background-repeat: no-repeat;
+    background-position: left 45% center;
+}
+.class_btnwrap {
+    display: flex;
+    justify-content: center;
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+.card {
+    box-sizing: border-box;
+    width: 24%;
+    margin: 0 auto;
+    padding: 1%;
+    position: relative;
+    overflow: hidden;
+}
+.like_icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #2B4C7C;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: -38px;
+    left: 18px;
+    transition:.3s;
+    z-index: 2;
+}
+.card:hover .like_icon {
+    top:18px;
+}
+.like_icon:hover{
+    color: #EE9F30;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.card .pic img {
+    width: 100%;
+    display: block;
+    transition: .3s;
+    z-index: 1;
+    border: 1px solid #C0CBDC;
+}
+.card:hover .pic img {
+    transform: scale(1.05);
+}
+.text {
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    padding: 2%;
+}
+.text :last-child {
+    text-align: right;
+    color: red;
+    margin-top: 5%;
+}
+/* customer reviews */
+#home_customer_reviews h2{
+    background-image: url(../img/blob_yellow.png);
+    background-size: 9.5% auto;
+    background-repeat: no-repeat;
+    background-position: left 45% center;
+}
+.reviews-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 2%;
+}
+.customer_reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    background-color: #C0CBDC;
+    border-radius: 20px;
+    padding: 2%;
+    margin-bottom: 2%;
+    
+}
+.customer {
+    text-align: center;
+    width: 35%;
+}
+.reviews {
+    width: 60%;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin-left: 5%;
+    line-height: 1.5em;
+}
+.customer img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 20px 1px rgba(43, 76, 124, 0.6);
+}
+/* choose us reasons */
+#chooseus {
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+.reasons .container {
+    display: flex;
+    justify-content: center;
+    height: 280px;/* ?? */
+    column-gap: 10%;
+    padding: 1em;
+}
+[class*="blob"] i, [class*="blob"] p {
+    color: #EE9F30;
+}
+[class*="blob"] i {
+    font-size: 35px;
+    padding: 0.3em;
+}
+[class*="blob"] p {
+    font-family: "Noto Sans TC";
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: 1.5em;
+}
+[class*="blob"] {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* 讓內容上下堆疊 */
+    justify-content: center; 
+    align-items: center;
+    width: 17%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+.blob1 {
+    background-image: url(../img/blob1.png);
+}
+.blob2 {
+    background-image: url(../img/blob2.png);
+}
+.blob3 {
+    background-image: url(../img/blob3.png);
+}
+.home_reasonsbanner_bg {
+    background-image: url(../img/home_bottombanner-bg.jpg);
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    object-fit: contain;
+}
+.home_reasonstext {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.12em;
+    padding: 1%;
+}
