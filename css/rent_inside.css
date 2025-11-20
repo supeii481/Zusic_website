@@ -1,0 +1,198 @@
+/* rent_inside */
+.bread_crumbs ol {
+    display: flex;
+    margin: 2em 1em;
+}
+.bread_crumbs a {
+    margin: 1em 0;
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.24em;
+    padding: 0;
+}
+.bread_crumbs li + li::before {
+    content: '>';
+    margin: 0 1em; 
+    position: static; 
+    font-size: 20px;
+    font-weight: bold;
+    z-index: auto;
+}
+.bread_crumbs a:hover {
+    color: #EE9F30;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.commodity_top {
+    display: inline-block;
+    padding: 0
+}
+#rent_inside h1 {
+    margin: 1em 0.5em;
+    padding: 0;
+}
+.commodity_top {
+    display: flex;
+    align-items: center;
+}
+.addlike_btn {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: #2B4C7C;
+    border-radius: 100px;
+    padding: 0.12em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addlike_btn:hover {
+    background: #EE9F30;
+    border: #EE9F30;
+    transition: border 0.3s, background 0.3s;
+}
+/* commodity */
+.commodity {
+    display: flex;
+    margin: 1em;
+    justify-content: space-around;
+}
+.commodity_img, .commodity_text {
+    width: 50%;
+}
+.main_img {
+    width: 60%;
+    display: flex;
+    justify-self: center;
+    margin: 1em 0 2em 0;
+    border: 1px solid gray;
+}
+.else_img {
+    display: flex;
+    justify-content: center;
+}
+.else_img button {
+    border: 1px solid gray;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.commodity_text h2 {
+    margin: -1em;
+    padding: 0;
+}
+.commodity_text p, .date .normal-p {
+    margin: 0 1em 1em 1em;
+    padding: 0;
+}
+.black {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid black;
+}
+.white {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+}
+.transparent {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: #EEEEEE;
+    border: 1px solid black;
+}
+hr {
+    margin: 2em 0;
+}
+input {
+    font-size: 20px;
+}
+.choose_color {
+    display: flex;
+    position: relative;
+}
+.color {
+    position: absolute;
+    bottom: 20%;
+    left: 12.5em;
+}
+.addcart_btn {
+    display: flex;
+    justify-content: right;
+}
+.addcart_btn button {
+    width: 180px;
+    margin-right: 1.5em;
+}
+.text {
+    padding-right: 0;;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* introduce */
+.introduce_wrap {
+    margin: 3em 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 230px;/* ?? */
+    column-gap: 10%;
+    text-align: center;
+}
+.introduce_wrap p {
+    font-size: 30px;
+}
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid #EE9F30;
+    margin: 1em auto 2em auto;
+    font-family: "Noto Sans TC";
+    font-size: 25px;
+    letter-spacing: 0.24em;
+    text-align: center;
+    table-layout: fixed;
+    background-color: #FFF3D3;
+    color: #EE9F30;
+}
+th,td {
+    border: 1px solid #EE9F30;
+    text-align: center;
+    padding: 1em;
+}
+th {
+    font-weight: bold;
+}
+.introduce_text p {
+    margin: 0 1.2em;
+    padding: 0;
+}
+
+/* another commodity */
+article {
+    background-image: url(../img/rent_inside/rent_inside-bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden;
+    padding-bottom: 3em;
+}
+.container h2 {
+    display: inline-block;
+    padding: 0;
+    margin: 2em 1em 1.5em 1em;
+}
+.another_wrap {
+    position: relative;
+}

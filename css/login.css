@@ -1,0 +1,127 @@
+#login {
+    background-image: url(../img/login_img/login-bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+#login .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 5em auto;
+}
+article h2 {
+    margin: 1em 0;
+    width: 180px;
+    border-bottom: 3px solid #2B4C7C;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-self: center;
+    flex-wrap: nowrap;
+}
+#login .normal_form {
+    position: relative;
+}
+.leave_icon {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    font-size: 30px;
+    color: #2B4C7C;
+    padding: 0.5em;
+}
+.leave_icon:hover {
+    color: #EE9F30;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.form_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    width: 90%;
+    margin: 3em 0 1em 0;
+}
+.form-group {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em 0;
+    width: 100%;
+}
+.form-group label {
+    display: block;
+    font-size: 25px;
+    color: #2B4C7C;
+    margin-bottom: 0.5em;
+}
+.form-group input, textarea {
+    width: 80%;
+    display: block;
+    font-size: 25px; 
+    color: #2B4C7C;
+    margin-bottom: 0.5em; /* 增加標籤與輸入框間距 */
+    padding: 0.3em;
+}
+/*  another login */
+.else {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.else p:hover {
+    color: #EE9F30;
+    cursor: pointer;
+    transition: box-shadow 0.3s, color 0.3s;
+}
+.login_text, .morechoose {
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B4C7C;
+    text-align: center;
+    padding: 0.2em;
+    line-height: 1.2em;
+}
+.morechoose-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 3em 0 1em 0;
+}
+.morechoose-wrap p {
+    z-index: 2; 
+}
+.morechoose-wrap::before {
+    content: "";
+    flex-grow: 1; /* Flex會按比例獲得剩餘空間 */
+    height: 1px;
+    background-color: gray;
+    margin-right: -15px; /* 消除與 span 的 padding 重疊造成的間隙 */
+}
+.morechoose-wrap::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: gray;
+    margin-left: -15px;
+}
+.social_media_icon {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    margin-bottom: 4em;
+}
+.social_media_icon img {
+    width: 55px;
+}
+.social_media_icon img:hover {
+    cursor: pointer;
+    transform: scale(1.27);/* 放大而不影醒其他東西  */
+    transition: transform 0.3s;
+}

@@ -1,4 +1,4 @@
-/* class */
+/* rent */
 #rent {
     background-image: url(../img/instrument-img/rentbg.jpg);
     background-size: cover;
@@ -6,12 +6,13 @@
     background-position: center center;
     overflow: hidden;
 }
-#rent h2{
+#rent h1{
     background-image: url(../img/blob_purple.png);
-    background-size: 9.5% auto;
+    background-size: 10% auto;
     background-repeat: no-repeat;
-    background-position: left 45% center;
+    background-position: left 44% center;
 }
+/* class */
 .class_btnwrap {
     margin: 0 2em 2em 0;
 }

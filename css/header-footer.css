@@ -41,6 +41,9 @@ nav li a:hover {
     top: 8%;/* ?? */
     left: 90%;/* ?? */
 }
+.header_icon a {
+    color: #2B4C7C;
+}
 .user_icon, .cart_icon {
     padding: 0.5em;
 }
@@ -77,6 +80,7 @@ footer nav {
     height: 110px;/* ?? */
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
 }
 .footer_logo img {
     height: 100%;

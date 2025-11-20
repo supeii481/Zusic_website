@@ -1,0 +1,82 @@
+/* servicecenter */
+.servicecenter_headerbanner_smbg {
+    background-image: url("../img/service_center-img/service_center-bg.jpg");
+}
+#servicecenter h1{
+    background-image: url(../img/service_center-img/blob_blue.png);
+    background-size: 10% auto;
+    background-repeat: no-repeat;
+    background-position: left 44% center;
+}
+/* search */
+.classbtn_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+}
+/* information */
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+.information {
+    margin-left: 3em;
+}
+.information_content {
+    display: flex;
+}
+.information h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: 0;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.content {
+    display: flex;
+    position: relative;
+}
+.content :last-child {
+    position: absolute;
+    bottom: 0;
+    right: 3em;
+}
+.information_content p {
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    color: black;
+    letter-spacing: 0.2em;
+    line-height: 2em ;
+}
+.information .normal_btn {
+    margin: 1em 1em 1em 0;
+}
+/* shopimg */
+.shop {
+    background-image: url(../img/service_center-img/shopimg_bg.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+.shop .container {
+    position: relative;
+}    
+.shopimg_wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+.shopimg_wrap img {
+    width: 50%;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+.shopimg_wrap :nth-child(odd) {
+    opacity: .5;
+}
