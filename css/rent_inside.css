@@ -178,7 +178,6 @@ th {
     margin: 0 1.2em;
     padding: 0;
 }
-
 /* another commodity */
 article {
     background-image: url(../img/rent_inside/rent_inside-bg.jpg);
@@ -193,6 +192,6 @@ article {
     padding: 0;
     margin: 2em 1em 1.5em 1em;
 }
-.another_wrap {
+.else_wrap {
     position: relative;
 }
