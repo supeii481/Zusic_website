@@ -111,7 +111,7 @@ h3 {
     display: flex;
     justify-content: space-between;
 }
-.img_btn button {
+.img_btn button, .arrowbtn_wrap1 button, .arrowbtn_wrap2 button {
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -124,7 +124,7 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-.img_btn :hover {
+.img_btn:hover, .arrowbtn_wrap1 button:hover, .arrowbtn_wrap2 button:hover {
     background: #EE9F30;
     border: #EE9F30;
     transition: border 0.3s, background 0.3s;

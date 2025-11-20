@@ -76,7 +76,6 @@
     margin: 1em;
     border-radius: 20px;
 }
-
 .shopimg_wrap :nth-child(odd) {
     opacity: .5;
 }

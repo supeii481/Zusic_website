@@ -192,6 +192,16 @@ article {
     padding: 0;
     margin: 2em 1em 1.5em 1em;
 }
-.else_wrap {
+.another_wrap1, .another_wrap2 {
     position: relative;
+}
+.arrowbtn_wrap1 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+.arrowbtn_wrap2 {
+    position: absolute;
+    top: 45%;
+    right: 0;
 }
