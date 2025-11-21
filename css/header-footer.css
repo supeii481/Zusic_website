@@ -112,6 +112,9 @@ footer nav {
 }
 .footerbar .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .footerbar .container p {
     line-height: 1.4;
