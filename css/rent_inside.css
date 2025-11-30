@@ -1,16 +1,28 @@
-/* rent_inside */
+/* 商品內頁css */
+body {
+    background-image: url(../img/instrument-img/rentbg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+}
+#rent_inside {
+    margin-top: 135px;
+}
 .bread_crumbs ol {
     display: flex;
     margin: 2em 1em;
 }
 .bread_crumbs a {
     margin: 1em 0;
-    font-family: "Noto Sans TC";
     font-size: 20px;
     font-weight: bold;
     color: black;
     letter-spacing: 0.24em;
     padding: 0;
+}
+.now a {
+    color: #EE9F30;
+    cursor: default;
 }
 .bread_crumbs li + li::before {
     content: '>';
@@ -25,6 +37,9 @@
     cursor: pointer;
     transition: color 0.3s;
 }
+.now a:hover {
+    cursor: default;/* 將游標設定回預設的箭頭圖標 */
+}
 .commodity_top {
     display: inline-block;
     padding: 0
@@ -32,6 +47,11 @@
 #rent_inside h1 {
     margin: 1em 0.5em;
     padding: 0;
+}
+.container h2 {
+    display: inline-block;
+    padding: 0;
+    margin: 2em 1em 1.5em 1em;
 }
 .commodity_top {
     display: flex;
@@ -66,22 +86,25 @@
     width: 50%;
 }
 .main_img {
-    width: 60%;
+    width: 90%;
     display: flex;
     justify-self: center;
     margin: 1em 0 2em 0;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 .else_img {
     display: flex;
     justify-content: center;
+    column-gap: 1em;
 }
-.else_img button {
+.else_img img {
+    width: 150px;
+    background-color: #ffffff55;
+    border: 1px solid rgba(128, 128, 128, 0.491);
+}
+.commodity_text {
     border: 1px solid gray;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5%;
 }
 .commodity_text h2 {
     margin: -1em;
@@ -135,63 +158,70 @@ input {
     width: 180px;
     margin-right: 1.5em;
 }
-.text {
-    padding-right: 0;;
-    font-size: 25px;
-    font-weight: bold;
-}
 /* introduce */
 .introduce_wrap {
     margin: 3em 0 0 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 230px;/* ?? */
+    height: 250px;
     column-gap: 10%;
     text-align: center;
 }
 .introduce_wrap p {
     font-size: 30px;
-}
-table {
-    width: 1000px;
-    border-collapse: collapse;
-    border: 1px solid #EE9F30;
-    margin: 1em auto 2em auto;
-    font-family: "Noto Sans TC";
-    font-size: 25px;
-    letter-spacing: 0.24em;
-    text-align: center;
-    table-layout: fixed;
-    background-color: #FFF3D3;
-    color: #EE9F30;
-}
-th,td {
-    border: 1px solid #EE9F30;
-    text-align: center;
-    padding: 1em;
-}
-th {
     font-weight: bold;
 }
 .introduce_text p {
     margin: 0 1.2em;
     padding: 0;
 }
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 1em auto;
+    font-size: 25px;
+    letter-spacing: 0.24em;
+    text-align: center;
+    table-layout: fixed;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
+    overflow: hidden;/* 確保圓角能裁切掉內容 */
+}
+th {
+    border-right: 2px solid white;
+    background-color: #EE9F30;
+    color: white;
+    font-weight: bold;
+    padding: 15px 10px;
+    text-align: center;
+    vertical-align: middle;
+    height: 70px;
+}
+/* 移除最右邊 TH 的右邊框 */
+th:last-child {
+    border-right: none;
+}
+td {
+    color: #EE9F30;
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+    height: 70px;
+}
+td:hover {
+    background-color: #FFF3D3;
+    transition: background-color 0.3s ease; /* 讓顏色變化更平滑 */
+}
 /* another commodity */
-article {
-    background-image: url(../img/rent_inside/rent_inside-bg.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center center;
-    overflow: hidden;
-    padding-bottom: 3em;
-}
-.container h2 {
-    display: inline-block;
+.another_wrap {
+    margin: 0;
     padding: 0;
-    margin: 2em 1em 1.5em 1em;
 }
-.another_wrap1, .another_wrap2 {
-    position: relative;
+.card-list {
+    margin-top: 2em;
+}
+article {
+    margin-bottom: 6em;
 }

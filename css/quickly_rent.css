@@ -1,19 +1,12 @@
-/* quicklyrent */
-.quicklyrent_headerbanner_smbg {
-    background-image: url("../img/quickly_rent-img/quickly_rent-banner.jpg");
-}
-.quickly_rent_banner {
-    width: 70%;
-    margin-left: 30%;
-}
-#quicklyrent {
-    background-image: url(../img/quickly_rent-img/quickly_rent-bg.jpg);
+/* 快速租借專區css */
+body {
+    background-image: url(../img/quickly_rent-img/quickly_rent-bg.png);
     background-size: cover;
     background-repeat: repeat;
     background-position: center center;
-    overflow: hidden;
 }
 article h1 {
+    margin-top: 135px;
     background-image: url(../img/quickly_rent-img/blob_purpleblue.png);
     background-size: 10% auto;
     background-repeat: no-repeat;
@@ -32,22 +25,21 @@ article h1 {
     position: relative;
 }
 .progress_bar p {
-    font-family: "Noto Sans TC";
     font-size: 20px;
     color: black;
     text-align: center;
     padding: 0.2em;
-    line-height: 1.2em;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+.step_text {
+    margin: 2em 0;
 }
 .step_text h2, .step_text p {
+    margin: 0;
     padding: 0;
     letter-spacing: 0.2em;
-}
-.step_text h2 {
-    margin-bottom: 0;
-}
-.step_text p {
-    margin-top: 0;
+    text-align: center;
 }
 .progress_bar li + li::before {
     content: '';
@@ -66,13 +58,12 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2em 2em 2em;
+
 }
 .quickly_box {
     border-radius: 20px;
     width: 50%;
-    margin: 0 3em 3em 3em;
-    padding: 3em 3em 1em 3em;
+    padding: 3em;
     margin-left: 50%;
     transform: translatex(-50%);
     /* From https://css.glass */
@@ -97,4 +88,12 @@ article {
 }
 section {
     margin: 3.5em auto 2em auto;
+}
+.middle_bg {
+    background-image: url(../img/music_notes-dec.png);
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
 }

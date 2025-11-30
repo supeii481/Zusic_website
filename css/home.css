@@ -1,36 +1,33 @@
+/* 首頁css */
 /* header banner */
 .home_headerbanner_bg {
-    height: 500px;/* ?? */
+    margin-top: 100px;
+    height: 650px;
     background-image: url(../img/home_banner-bg.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: center center;
     overflow: hidden; /* 確保超出容器的圖片不會顯示滾動條 */
 }
-.home_banner_item {
+.home_headerbanner_bg .container{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;/* 水平置中 (主軸) */
-    align-items: center;/* 垂直置中 (交叉軸) */
-    background-image: url("../img/home_banner-dec.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center bottom 20%;
-    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.slogn, .slogn h1 {
+.slogn, .slogn h1 { /* 因為共通的css有設定過h1的樣式，所以要蓋過去  */
     font-size: 35px;
     color: #EE9F30;
     letter-spacing: 0.12em;
-    margin-top: -8%;
+    margin-top: -15%;
 }
 .slogn h1, .english_slogn {
-    padding: 2% 0;
+    padding: 3% 0;
     margin: 0;
 }
 .slogn h1 {
-    font-family: "Noto Sans TC";
     font-weight: bold;
     display: flex;
     justify-self: start;
@@ -51,32 +48,43 @@
     display: flex;
 }
 .home_bannerpic img {
-    position: absolute;  /*讓每張圖片都能自由定位 */
+    position: absolute;
     height: auto;
     object-fit: cover; /* 讓圖片不變形 */
+    filter: drop-shadow(0 0 10px rgba(164, 165, 148, 0.4)); /* 柔和的深色陰影，因為不規則所以不能用box-shadow*/
 }
 .home_bannerpic :first-child {
-    width: 110px;
-    left: 6%;
-    bottom: 5%;
+    width: 130px;
+    left: -3%;
+    bottom: 10%;
 }
 .home_bannerpic :nth-child(2) {
-    width: 390px;
-    left: 20%;
-    top: 5%;
+    width: 430px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .home_bannerpic :nth-child(3) {
-    width: 200px;
-    right: -1%;
+    width: 250px;
+    right: -6%;
     top: 0;
-    transform: rotate(15deg);
+    transform: rotate(18deg);
 } 
 .home_bannerpic :last-child {
-    width: 120px;
-    right: 3%;
-    bottom: 4%;
+    width: 150px;
+    right: -2%;
+    bottom: 5%;
 } 
 /* news */
+#news {
+    padding-bottom: 35px;
+}
+#news h1, #news h2 {
+    background-image: url(../img/blob_pink.png);
+    background-size: 10% auto;
+    background-repeat: no-repeat;
+    background-position: left 44% center;
+}
 .home_newscard {
     display: flex;
     flex-wrap: wrap;
@@ -84,14 +92,13 @@
     margin: 0 1em;
 }
 .news1, .news2, .news3 {
-    font-family: "Noto Sans TC";
     font-size: 25px;width: 32%;
-    border-radius: 20px;
+    border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 3%;/* wrap間的gap */
+    column-gap: 3%;
     padding: 1em 0 1em 0;
 }
 .news_wrap1 p {
@@ -121,8 +128,8 @@
         background-color: #A83774;
     }
     img {
-        border-radius: 20px;
-        box-shadow: 2px 4px 15px 1px rgba(168, 55, 116, 0.3);
+        border-radius: 5%;
+        /* box-shadow: 2px 4px 15px 1px rgba(168, 55, 116, 0.3); */
     }
 }
 .news2 {
@@ -132,8 +139,8 @@
         background-color: #2C7DBD;
     }
     img {
-        border-radius: 20px;
-        box-shadow: 2px 4px 15px 1px rgba(44, 125, 189, 0.3);
+        border-radius: 5%;
+        /* box-shadow: 2px 4px 15px 1px rgba(44, 125, 189, 0.3); */
     }
 }
 .news3 {
@@ -143,8 +150,8 @@
         background-color: #4FE16F;
     }
     img {
-        border-radius: 20px;
-        box-shadow: 2px 4px 20px 1px rgba(79, 225, 111, 0.2);
+        border-radius: 5%;
+        /* box-shadow: 2px 4px 20px 1px rgba(79, 225, 111, 0.2); */
     }
 }
 .more_btnwrap a {
@@ -152,14 +159,17 @@
     align-items: center;
     justify-content: center;
 }
+#news .news1:hover, #news .news2:hover, #news .news3:hover {
+    box-shadow: 1px 2px 15px 1px rgba(43, 76, 124, 0.3);
+}
 /* hot */
-#home_hotinstrument {
+/* #home_hotinstrument {
     background-image: url(../img/home_hot-bg.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: center center;
     overflow: hidden;
-}
+} */
 #home_hotinstrument h2{
     background-image: url(../img/blob_purple.png);
     background-size: 9.5% auto;
@@ -174,58 +184,98 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 1em;
+    margin: 50px 1em -1em 1em;
 }
 .card {
-    box-sizing: border-box;
     width: 24%;
-    margin: 0 auto;
-    padding: 1%;
+    margin: 0 auto 1em auto;
+    padding: 1.5%;
     position: relative;
     overflow: hidden;
+    border-radius: 5%;
+    /* From https://css.glass */
+    background: rgba(255, 243, 211, 1);
+    border: 1px solid rgba(255, 243, 211, 0.3);
 }
-.like_icon {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    color: #2B4C7C;
-    text-align: center;
-    font-size: 30px;
+.card:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+[class*="degree_label"] {
     position: absolute;
-    top: -38px;
-    left: 18px;
-    transition:.3s;
-    z-index: 2;
+    right: 8px;
+    top: 35px;
 }
-.card:hover .like_icon {
-    top:18px;
+[class*="degree_label"] span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 60px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px; /* 設定與 height 相同數值 */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}    
+.triangle {
+    width: 11px;
+    height: 8px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);/* 定義三個座標點 (X Y) */
+    position: absolute;
+    right: 0;
+    top: 38px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-.like_icon:hover{
-    color: #EE9F30;
-    transition: color 0.3s;
-    cursor: pointer;
+.low-degree_label span {
+    background-color: #EE9F30;
+}
+.low-degree_label .triangle {
+    background-color: #916425;
+}
+.advance-degree_label span {
+    background-color: #2C7DBD;
+}
+.advance-degree_label .triangle {
+    background-color: #194567;
+}
+.pro-degree_label span {
+    background-color: #A83774;
+}
+.pro-degree_label .triangle {
+    background-color: #561d3b;
+}
+.card .pic {
+    border: 1px solid #C0CBDC;
+    border-radius: 5%;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .card .pic img {
     width: 100%;
     display: block;
     transition: .3s;
-    z-index: 1;
-    border: 1px solid #C0CBDC;
 }
 .card:hover .pic img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 .text {
-    font-family: "Noto Sans TC";
     font-size: 20px;
     letter-spacing: 0.18em;
     text-align: center;
-    padding: 2%;
+    margin-top: 5%;
 }
 .text :last-child {
     text-align: right;
-    color: red;
+    font-weight: bold;
+    color: rgb(218, 103, 103);
     margin-top: 5%;
+}
+#news, #home_hotinstrument {
+    padding-bottom: 25px;
 }
 /* customer reviews */
 #home_customer_reviews h2{
@@ -237,6 +287,8 @@
 .reviews-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     column-gap: 2%;
 }
@@ -245,12 +297,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 28%;
+    width: 30%;
     background-color: #C0CBDC;
     border-radius: 20px;
     padding: 2%;
     margin-bottom: 2%;
-    
+    box-shadow: 1px 2px 15px 1px rgba(43, 76, 124, 0.3);
 }
 .customer {
     text-align: center;
@@ -258,7 +310,6 @@
 }
 .reviews {
     width: 60%;
-    font-family: "Noto Sans TC";
     font-size: 16px;
     letter-spacing: 0.1em;
     margin-left: 5%;
@@ -266,21 +317,33 @@
 }
 .customer img {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 1px 2px 20px 1px rgba(43, 76, 124, 0.6);
+    border-radius: 5%;
 }
 /* choose us reasons */
 #chooseus {
-    text-align: center;
+    /*  */
     letter-spacing: 0.1em;
     line-height: 1.5em;
 }
-.reasons .container {
+.reasons_text {
+    font-family: "Damion";
+    font-size: 35px;
+    font-weight: bold;
+    color: #EE9F30;
+    letter-spacing: 0.4em;
+    text-align: center;
+    padding: 1%;
+    margin: 3% 0;
+}
+.reasons {
     display: flex;
     justify-content: center;
-    height: 280px;/* ?? */
+    height: 280px;
     column-gap: 10%;
-    padding: 1em;
+    text-align: center;
+}
+.reasons p {
+    font-weight: bold;
 }
 [class*="blob"] i, [class*="blob"] p {
     color: #F66744;
@@ -290,7 +353,6 @@
     padding: 0.3em;
 }
 [class*="blob"] p {
-    font-family: "Noto Sans TC";
     font-size: 18px;
     letter-spacing: 0.2em;
     line-height: 1.5em;
@@ -318,19 +380,10 @@
     background-image: url(../img/blob3.png);
 }
 .home_reasonsbanner_bg {
-    background-image: url(../img/home_bottombanner-bg.jpg);
-    height: 300px;
-    background-size: cover;
+    background-image: url(../img/music_notes-dec.png);
+    height: 150px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;
-    object-fit: contain;
-}
-.home_reasonstext {
-    font-family: "Damion";
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 0.4em;
-    padding: 1%;
 }

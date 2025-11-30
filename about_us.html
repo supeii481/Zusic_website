@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zusic租樂趣-關於租樂趣</title>
+    <!-- reset -->
     <link rel="stylesheet" href="css/reset.css">
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 共通的css -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/about_us.css">
 </head>
 <body>
+    <!-- header -->
     <!-- header -->
     <header>
         <div class="navbar">
@@ -25,6 +31,7 @@
                 </div>
                 <nav>
                     <ul>
+                        <li><a href="news.html">最新消息</a></li>
                         <li><a href="about_us.html">關於租樂趣</a></li>
                         <li><a href="rent.html">樂器租借</a></li>
                         <li><a href="quickly_rent.html">單日快速租借專區</a></li>
@@ -36,9 +43,9 @@
                     <a href="login.html" class="user_icon">
                         <i class="fa-solid fa-user-gear" alt="user_icon" title="member area"></i>
                     </a>
-                    <div class="cart_icon">
+                    <a href="#" class="cart_icon">
                         <i class="fa-solid fa-cart-shopping" alt="cart_icon" title="cart"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -90,7 +97,7 @@
     <article id="contact">
         <div class="container">
             <div class="normal_form">
-                <h2>聯絡我們</h2>
+                <h2 class="h2_line">聯絡我們</h2>
                 <div>
                     <form>
                         <div class="form-group">
@@ -103,7 +110,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">想對我們說什麼呢~</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="請輸入您的訊息"></textarea>
+                            <textarea id="message" name="message"  required placeholder="請輸入您的訊息"></textarea>
                         </div>
                         <button type="submit" class="normal_btn">提交</button>
                     </form>

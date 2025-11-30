@@ -1,5 +1,6 @@
-/* news */
+/* 最新消息css */
 .news_headerbanner_smbg {
+    margin-top: 100px;
     background-image: url("../img/news-img/news-bg.jpg");
 }
 .content img {

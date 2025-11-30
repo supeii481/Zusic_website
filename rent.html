@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zusic租樂趣-樂器列表</title>
+    <!-- reset -->
     <link rel="stylesheet" href="css/reset.css">
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 共通的css -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/rent.css">
 </head>
 <body>
@@ -25,6 +30,7 @@
                 </div>
                 <nav>
                     <ul>
+                        <li><a href="news.html">最新消息</a></li>
                         <li><a href="about_us.html">關於租樂趣</a></li>
                         <li><a href="rent.html">樂器租借</a></li>
                         <li><a href="quickly_rent.html">單日快速租借專區</a></li>
@@ -36,9 +42,9 @@
                     <a href="login.html" class="user_icon">
                         <i class="fa-solid fa-user-gear" alt="user_icon" title="member area"></i>
                     </a>
-                    <div class="cart_icon">
+                    <a href="#" class="cart_icon">
                         <i class="fa-solid fa-cart-shopping" alt="cart_icon" title="cart"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -78,7 +84,7 @@
                 </div>
                 <div class="filter-group">
                     <select class="filter">
-                        <option value="" disabled selected>商品排序</option>
+                        <option value="" disabled selected>商品排序</i></option>
                         <option value="price-lowtohight">價格低到高</option>
                         <option value="price-highttolow">價格高到低</option>
                         <option value="degree-lowtotop">程度低到高</option>
@@ -88,7 +94,6 @@
             </div>
             <div class="card-list">
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_piano-P15.png" alt="A brand piano-P15">
                     </div>
@@ -96,9 +101,12 @@
                         <p>A品牌平台型鋼琴-P15</p>
                         <p>NT$ 10,000/日</p>
                     </div>
+                    <div class="pro-degree_label">
+                        <span>專業</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_upright_piano-P22.png" alt="A brand upright piano-P22">
                     </div>
@@ -106,9 +114,12 @@
                         <p>A品牌直立式鋼琴-P22</p>
                         <p>NT$ 600/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_violin-V09.png" alt="A brand violin-V09">
                     </div>
@@ -116,9 +127,12 @@
                         <p>A品牌小提琴-V09</p>
                         <p>NT$ 750/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_viola-V14.png" alt="A brand viola-V14">
                     </div>
@@ -126,9 +140,12 @@
                         <p>A品牌中提琴-V14</p>
                         <p>NT$ 800/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_cello-C08.png" alt="A brand cello-C08">
                     </div>
@@ -136,19 +153,24 @@
                         <p>A品牌大提琴-C08</p>
                         <p>NT$ 900/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_db-DB05.png" alt="A brand db-DB05">
                     </div>
                     <div class="text">
                         <p>A品牌低音大提琴-DB05</p>
                         <p>NT$ 1,500/日</p>
+                    </div><div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
                     </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_flute-F3.png" alt="A brand flute-F3">
                     </div>
@@ -156,9 +178,12 @@
                         <p>A品牌長笛-F3</p>
                         <p>NT$ 750/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_clarinet-C05.png" alt="A brand clarinet-C05">
                     </div>
@@ -166,9 +191,12 @@
                         <p>A品牌豎笛-C05</p>
                         <p>NT$ 750/日</p>
                     </div>
+                    <div class="low-degree_label">
+                        <span>新手</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_horn-H01.png" alt="A brand horn-H01">
                     </div>
@@ -176,9 +204,12 @@
                         <p>A品牌法國號-H01</p>
                         <p>NT$ 1,500/日</p>
                     </div>
+                    <div class="advance-degree_label">
+                        <span>進階</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_trumpet-T02.png" alt="A brand trumpet-T02">
                     </div>
@@ -186,9 +217,12 @@
                         <p>A品牌小號-T02</p>
                         <p>NT$ 1,500/日</p>
                     </div>
+                    <div class="advance-degree_label">
+                        <span>進階</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_sax-S02.png" alt="A brand sax-S02">
                     </div>
@@ -196,15 +230,22 @@
                         <p>A品牌薩克斯風-S02</p>
                         <p>NT$ 1,750/日</p>
                     </div>
+                    <div class="advance-degree_label">
+                        <span>進階</span>
+                        <div class="triangle"></div>
+                    </div>
                 </a>
                 <a href="rent_inside.html" class="card">
-                    <div class="like_icon"><i class="fa-solid fa-heart-circle-plus"></i></div>
                     <div class="pic">
                         <img src="img/instrument-img/A_brand_jazz drums-JD01.png" alt="A brand jazz drums-JD01">
                     </div>
                     <div class="text">
                         <p>A品牌爵士鼓-JD01</p>
                         <p>NT$ 10,000/日</p>
+                    </div>
+                    <div class="pro-degree_label">
+                        <span>專業</span>
+                        <div class="triangle"></div>
                     </div>
                 </a>
             </div>

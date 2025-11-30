@@ -1,4 +1,6 @@
+/* 登入頁css */
 #login {
+    margin-top: 100px;
     background-image: url(../img/login_img/login-bg.jpg);
     background-size: cover;
     background-repeat: repeat;
@@ -11,16 +13,6 @@
     justify-content: center;
     position: relative;
     margin: 5em auto;
-}
-article h2 {
-    margin: 1em 0;
-    width: 180px;
-    border-bottom: 3px solid #2B4C7C;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    display: flex;
-    justify-self: center;
-    flex-wrap: nowrap;
 }
 #login .normal_form {
     position: relative;
@@ -45,13 +37,14 @@ article h2 {
 }
 form {
     width: 90%;
-    margin: 3em 0 1em 0;
+    margin: 3em 0 2em 0;
 }
 .form-group {
     display: flex;
     justify-content: center;
     margin: 0.5em 0;
     width: 100%;
+    position: relative;
 }
 .form-group label {
     display: block;
@@ -63,12 +56,24 @@ form {
     width: 80%;
     display: block;
     font-size: 25px; 
-    color: #2B4C7C;
     margin-bottom: 0.5em; /* 增加標籤與輸入框間距 */
-    padding: 0.3em;
+}
+.form-group i {
+    font-size: 25px;
+    color: #2B4C7C;
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    transform: translateY(-40%);
+    cursor: pointer;
+}
+.form-group i:hover {
+    color: #EE9F30;
+    transition: colorr 0.3s;
 }
 /*  another login */
 .else {
+    margin: 0.5em;
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -79,7 +84,6 @@ form {
     transition: box-shadow 0.3s, color 0.3s;
 }
 .login_text, .morechoose {
-    font-family: "Noto Sans TC";
     font-size: 20px;
     font-weight: bold;
     color: #2B4C7C;

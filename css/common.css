@@ -1,12 +1,13 @@
-/* 共用 */
+/* 共用css */
+body, button, input, select, textarea {
+    font-family: "Noto Sans TC";
+}
+/* 瀏覽器會為 <button>、<input>、<select> 和 <textarea> 等表單元素設定一套強制的預設樣式 */
 .container {
     max-width: 1280px;/* TODO:測試的螢幕小於1920會壞掉，所以先用筆電的預設 */
     height: 100%;/* 讓 container 繼承 navbar 的高度 */
     margin: 0 auto;
     position: relative;
-}
-h1, h2, h3 {
-    font-family: "Noto Sans TC";
 }
 h1 {
     font-size: 35px;
@@ -24,23 +25,32 @@ h2 {
     color: #2B4C7C;
     display: flex;
     justify-content: center;
-    letter-spacing: 0.44em;
+    letter-spacing: 0.3em;
     padding: 1.5em;
-    margin: 1em;
+    margin: 50px;
+    line-height: 2em;
+}
+.h2_line {
+    margin: 1em 0;
+    border-bottom: 3px solid #2B4C7C;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    display: flex;
+    justify-self: center;
+    flex-wrap: nowrap;
 }
 h3 {
     font-size: 25px;
     font-weight: bold;
     color: black;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.15em;
     padding: 0 0.2em;
     line-height: 2em ;
 }
 .second-p, .normal-p {
-    font-family: "Noto Sans TC";
     font-size: 20px;
     color: black;
-    letter-spacing: 0.24em;
+    letter-spacing: 1px;
     padding: 0.2em;
 }
 .normal-p {
@@ -52,7 +62,6 @@ h3 {
 .normal_btn {
     width: 130px;
     height: 50px;
-    font-family: "Noto Sans TC";
     font-size: 22px;
     font-weight: bold;
     color: white;
@@ -60,7 +69,7 @@ h3 {
     border-radius: 20px;
     letter-spacing: 0.11em;
     padding: 0.12em;
-    margin: 0 2% 1% 2%;
+    margin: 0 2%;
     cursor: pointer;
     text-align: center;
 }
@@ -68,12 +77,6 @@ h3 {
     background: #EE9F30;
     border: #EE9F30;
     transition: border 0.3s, background 0.3s;
-}
-#news h1, #news h2 {
-    background-image: url(../img/blob_green.png);
-    background-size: 10% auto;
-    background-repeat: no-repeat;
-    background-position: left 44% center;
 }
 [class*="smbg"] {
     height: 300px;
@@ -90,8 +93,8 @@ h3 {
 }
 .normal_form {
     border-radius: 20px;
-    width: 40%;
-    margin: 3em;
+    width: 45%;
+    margin: 5em;
     padding: 2em 2em 0 2em;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
@@ -99,6 +102,14 @@ h3 {
     backdrop-filter: blur(2.5px);
     -webkit-backdrop-filter: blur(2.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+label, input, textarea {
+    letter-spacing: 1px;
+}
+input, textarea, select{
+    border-radius: 10px;
+    border: 1px solid rgb(151, 147, 147);
+    padding: 0.5em;/* 輸入框和要打的字之間的間距 */
 }
 #contact .normal_btn, #login .normal_btn, #quicklyrent .normal_btn{
     width: 60%;
@@ -131,11 +142,13 @@ h3 {
 }
 .arrowbtn_wrap1 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
 }
 .arrowbtn_wrap2 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: 0;
+    transform: translateY(-50%);
 }
