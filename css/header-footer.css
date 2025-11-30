@@ -64,36 +64,58 @@ nav li a:hover {
     transition: box-shadow 0.3s, color 0.3s;
 }
 /* RWD */
-#menu_control, .menu_btn {
+#menu_control, .hb {
     display: none;
 }
 header .footer_icon {
     display: none;
 }
 @media screen and (max-width:768px) {
-    .menu_btn {
+    .hb {
         display: block;
         width: 40px;
         height: 40px;
         background-color: #2B4C7C;
+        border-radius: 15%;
         position: absolute;
         top: 50%;
         right: 10px;
         transform: translateY( -50% );
         cursor: pointer;
     }
-    .menu_btn span {
-        content: '';
-        position: absolute;
+    .hb span {
+        width: 30px;
         height: 2px;
-        left: 2px;
-        width: 36px;
         background-color: white;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        box-shadow: 0 8px 0 white,
-                    0 -8px 0 white;
+        position: absolute;
+    }
+    .bar1 {
+        top: 10px;
+        left: 5px;
+        transition: top .3s .6s/*延遲*/, rotate .3s 0s; 
+    }
+    .bar2 {
+        top: 19px;
+        left: 5px;
+        opacity: 1;
+    }
+    .bar3 {
+        top: 28px;
+        left: 5px;
+        transition: top .3s .6s, rotate .3s 0s;
+    }
+    #menu_control:checked ~ .hb .bar2 {
+        opacity: 0;
+    }
+    #menu_control:checked ~ .hb .bar1 {
+        top: 19px;
+        rotate: 45deg;
+        transition: top .2s 0s, rotate .3s .3s;
+    }
+    #menu_control:checked ~ .hb .bar3 {
+        top: 19px;
+        rotate: 315deg;
+        transition: top .2s 0s, rotate .3s .3s;
     }
     .header_icon {
         margin-right: 65px;
