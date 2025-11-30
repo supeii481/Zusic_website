@@ -9,6 +9,26 @@ body, button, input, select, textarea {
     margin: 0 auto;
     position: relative;
 }
+@media screen and (max-width:1280px) {
+    .container {
+    max-width: 1130px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .container {
+    max-width: 920px;
+    }
+}
+@media screen and (max-width:810px) {
+    .container {
+    max-width: 810px;
+    }
+}
+@media screen and (max-width:430px) {
+    .container {
+    max-width: 430px;
+    }
+}
 h1 {
     font-size: 35px;
     font-weight: bold;

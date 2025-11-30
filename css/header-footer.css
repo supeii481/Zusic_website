@@ -70,7 +70,45 @@ nav li a:hover {
 header .footer_icon {
     display: none;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px) {
+    header .navbar {
+        height: 90px;
+    }
+    .header_logo {
+        height: 100px;
+    }
+    header nav a {
+        font-size: 19px;
+        margin: .7em;
+    }
+    .header_icon a {
+         padding: 20px; /*讓icon跟border距離加大 */
+        margin: 6px;
+    }
+    .header_icon i {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1024px) {
+    header .navbar {
+        height: 80px;
+    }
+    .header_logo {
+        height: 90px;
+    }
+    header nav a {
+        font-size: 17px;
+        margin: .3em;
+    }
+    .header_icon a {
+        padding: 0;
+        margin: 2px;
+    }
+    .header_icon i {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 810px) {
     .hb {
         display: block;
         width: 40px;
@@ -119,6 +157,7 @@ header .footer_icon {
     }
     .header_icon {
         margin-right: 65px;
+        font-size: 22px;
     }
     header nav {
         width: 80%;
@@ -186,6 +225,9 @@ header .footer_icon {
         opacity: 1;
     }
 }
+/* @media screen and (max-width:430px) {
+
+} */
 /* footer nav */
 .material-symbols-outlined {
     font-variation-settings:
