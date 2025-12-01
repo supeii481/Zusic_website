@@ -130,7 +130,7 @@ header .footer_icon {
     .bar1 {
         top: 10px;
         left: 5px;
-        transition: top .3s .6s/*延遲*/, rotate .3s 0s; 
+        transition: top .3s .4s/*延遲*/, rotate .3s 0s; 
     }
     .bar2 {
         top: 19px;
@@ -140,7 +140,7 @@ header .footer_icon {
     .bar3 {
         top: 28px;
         left: 5px;
-        transition: top .3s .6s, rotate .3s 0s;
+        transition: top .3s .4s, rotate .3s 0s;
     }
     #menu_control:checked ~ .hb .bar2 {
         opacity: 0;
@@ -225,9 +225,12 @@ header .footer_icon {
         opacity: 1;
     }
 }
-/* @media screen and (max-width:430px) {
+@media screen and (max-width:430px) {
 
-} */
+}
+@media screen and (max-width:390px) {
+
+}
 /* footer nav */
 .material-symbols-outlined {
     font-variation-settings:
