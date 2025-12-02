@@ -27,3 +27,22 @@ article {
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width:1280px) {
+    .news_headerbanner_smbg {
+        margin-top: 90px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .news_headerbanner_smbg {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width:810px) {
+
+}
+@media screen and (max-width:430px) {
+
+}
+@media screen and (max-width:390px) {
+
+}
