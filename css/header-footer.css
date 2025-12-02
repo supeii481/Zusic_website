@@ -406,14 +406,15 @@ footer nav {
         order: 3;
     }
     footer li {
-        line-height: 16px;
+        font-size: 16px;
+        line-height: 18px;
     }
     .material-symbols-outlined {
-        font-size: 16px;
+        font-size: 20px;
     }
     .footer_icon {
         order: 2;
-        font-size: 22px;
+        font-size: 25px;
         padding: 0;
         margin: 0;
     }
@@ -424,7 +425,7 @@ footer nav {
         margin: 5px;
     }
     .footerbar {
-        font-size: 10px;
+        font-size: 13px;
         height: auto;
     }
 }
