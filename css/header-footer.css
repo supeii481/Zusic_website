@@ -61,12 +61,12 @@ nav li a:hover {
 }
 .user_icon:hover, .cart_icon:hover {
     color: #EE9F30;
-    box-shadow: 0 0 0 3px #EE9F30;/* 用 box-shadow 取代 border才不用有flexbox因尺寸變化產生抖動問題  */
+    /* box-shadow: 0 0 0 3px #EE9F30; 用 box-shadow 取代 border才不用有flexbox因尺寸變化產生抖動問題  */
     border-radius: 20%;
     cursor: pointer;
     transition: box-shadow 0.3s, color 0.3s;
 }
-/* RWD */
+/* RWD-header */
 #menu_control, .menu_overlay, .hb {
     display: none;
 }
@@ -87,9 +87,6 @@ header .footer_icon {
     .header_icon a {
         padding: 20px; /*讓icon跟border距離加大 */
         margin: 6px;
-    }
-    .header_icon i {
-        font-size: 25px;
     }
 }
 @media screen and (max-width:1024px) {
@@ -160,7 +157,6 @@ header .footer_icon {
     }
     .header_icon {
         margin-right: 10%;
-        font-size: 22px;
     }
     .header_icon a {
         margin: 3px
@@ -278,6 +274,7 @@ footer nav {
     font-size: 25px;
     color: #2B4C7C;
     display: flex;
+    margin: 1%;
 }
 .map_icon, .ig_icon, .fb_icon {
     display: flex;
@@ -290,7 +287,7 @@ footer nav {
 }
 .map_icon:hover, .ig_icon:hover, .fb_icon:hover {
     color: #EE9F30;
-    box-shadow: 0 0 0 3px #EE9F30;
+    /* box-shadow: 0 0 0 3px #EE9F30; */
     border-radius: 20%;
     cursor: pointer;
     transition: box-shadow 0.3s, color 0.3s;
@@ -310,4 +307,121 @@ footer nav {
 }
 .footerbar .container p {
     line-height: 1.4;
+}
+/* RWD-footer */
+@media screen and (max-width:1280px) {
+    footer .navbar {
+        height: 95px;
+    }
+    .footer_logo {
+        height: 90px;
+    }
+    footer nav {
+        font-size: 14px;
+    }
+    footer li {
+        line-height: 20px;
+    }
+    .material-symbols-outlined {
+        font-size: 22px;
+    }
+    .footerbar {
+    font-size: 14px;
+    height: 50px;
+    }
+}
+@media screen and (max-width:1024px) {
+    footer .navbar {
+        height: 80px;
+    }
+    .footer_logo {
+        height: 80px;
+    }
+    footer nav {
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        margin:  0 0 0 1em;
+    }
+    
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+    .footer_icon a {
+        padding: 0;
+        margin: 5px;
+    }
+    .footer_icon i {
+        font-size: 22px;
+    }
+    .footerbar {
+        font-size: 12px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:810px) {
+    footer .navbar {
+        height: 70px;
+    }
+    .footer_logo {
+        height: 70px;
+    }
+    footer nav {
+        font-size: 10px;
+    }
+    
+    footer li {
+        line-height: 16px;
+    }
+    .material-symbols-outlined {
+        font-size: 16px;
+    }
+    .footer_icon {
+        font-size: 22px;
+    }
+    .map_icon, .ig_icon, .fb_icon {
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        margin: 5px;
+    }
+    .footerbar {
+        font-size: 10px;
+        height: 30px;
+    }
+}
+@media screen and (max-width:430px) {
+    footer .container {
+        flex-direction: column;
+    }
+    footer .navbar {
+        height: auto;
+    }
+    .footer_logo {
+        height: 70px;
+        position: relative;
+        align-self: flex-start;
+    }
+    footer nav {
+        order: 3;
+    }
+    footer li {
+        line-height: 16px;
+    }
+    .material-symbols-outlined {
+        font-size: 16px;
+    }
+    .footer_icon {
+        order: 2;
+        font-size: 22px;
+    }
+    .map_icon, .ig_icon, .fb_icon {
+        width: 30px;
+        height: 30px;
+        padding: 20px;
+        margin: 5px;
+    }
+    .footerbar {
+        font-size: 10px;
+        height: auto;
+    }
 }
