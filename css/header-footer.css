@@ -390,16 +390,17 @@ footer nav {
     }
 }
 @media screen and (max-width:430px) {
-    footer .container {
-        flex-direction: column;
-    }
     footer .navbar {
         height: auto;
+    }
+    footer .container {
+        flex-direction: column;
     }
     .footer_logo {
         height: 70px;
         position: relative;
         align-self: flex-start;
+        order: 1;
     }
     footer nav {
         order: 3;
@@ -413,6 +414,8 @@ footer nav {
     .footer_icon {
         order: 2;
         font-size: 22px;
+        padding: 0;
+        margin: 0;
     }
     .map_icon, .ig_icon, .fb_icon {
         width: 30px;
