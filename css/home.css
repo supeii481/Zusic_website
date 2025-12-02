@@ -83,8 +83,8 @@
         height: 500px;
     }
     .slogn, .slogn h1 {
-    font-size: 30px;
-    margin-top: -14%;
+        font-size: 30px;
+        margin-top: -14%;
     }
     .english_slogn {
         padding: 2% 0;
@@ -98,7 +98,7 @@
         bottom: 10%;
     }
     .home_bannerpic :nth-child(2) {
-        width: 365px;
+        width: 350px;
     } 
     .home_bannerpic :nth-child(3) {
         width: 200px;
@@ -132,7 +132,7 @@
         left: -40px;
     }
     .home_bannerpic :nth-child(2) {
-        width: 300px;
+        width: 290px;
     } 
     .home_bannerpic :nth-child(3) {
         width: 180px;
@@ -140,7 +140,7 @@
     } 
     .home_bannerpic :last-child {
         width: 100px;
-        right: -15px;
+        right: -20px;
     } 
 }
 @media screen and (max-width:810px) {
@@ -158,27 +158,27 @@
         line-height: 1em;
     }
     .home_bannerpic :first-child {
-        width: 85px;
-        left: -10px;
+        width: 73px;
+        left: 0;
     }
     .home_bannerpic :nth-child(2) {
-        width: 230px;
+        width: 220px;
     } 
     .home_bannerpic :nth-child(3) {
-        width: 150px;
-        right: -10px;
+        width: 138px;
+        right: 0;
     } 
     .home_bannerpic :last-child {
-        width: 90px;
-        right: 5px;
+        width: 78px;
+        right: 10px;
     } 
 }
-@media screen and (max-width:785px) {
-    .home_bannerpic :nth-child(odd), .home_bannerpic :last-child{
+@media screen and (max-width:730px) {
+    .home_bannerpic :nth-child(odd), .home_bannerpic :last-child {
         display: none;
     }
     .home_bannerpic :nth-child(2) {
-        width: 170px;
+        width: 230px;
     } 
 }
 @media screen and (max-width:430px) {
