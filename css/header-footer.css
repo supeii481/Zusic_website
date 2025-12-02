@@ -8,22 +8,24 @@ header .navbar {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     z-index: 1000;
 }
 header .container, footer .container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .header_logo {
-    height: 100px;
+    height: 110px;
 }
 .header_logo img {
     height: 100%;
 }
-nav ul {
-    white-space: nowrap; /* 防止導覽列項目換行 */
-}
+/* nav ul {
+    white-space: nowrap;  防止導覽列項目換行
+} */
 header nav li {
     display: inline-block;
 }
@@ -31,7 +33,7 @@ nav li a {
     font-size: 20px;
     font-weight: bold;
     color: #2B4C7C;
-    letter-spacing: 0.08em;/* 字距為字體大小 (20px) 的 12% (即 2.4px) */
+    letter-spacing: 1px;
     margin: 0 25px;
 }
 nav li a:hover {
@@ -43,6 +45,7 @@ nav li a:hover {
 .header_icon {
     font-size: 25px;
     display: flex;
+    padding: 1%;
 }
 .header_icon a {
     color: #2B4C7C;
@@ -54,7 +57,7 @@ nav li a:hover {
     width: 30px;
     height: 30px;
     padding: 20px;
-    margin: 5px;
+    margin: 4px;
 }
 .user_icon:hover, .cart_icon:hover {
     color: #EE9F30;
@@ -64,13 +67,13 @@ nav li a:hover {
     transition: box-shadow 0.3s, color 0.3s;
 }
 /* RWD */
-#menu_control, .hb {
+#menu_control, .menu_overlay, .hb {
     display: none;
 }
 header .footer_icon {
     display: none;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1280px) {
     header .navbar {
         height: 90px;
     }
@@ -82,7 +85,7 @@ header .footer_icon {
         margin: .7em;
     }
     .header_icon a {
-         padding: 20px; /*讓icon跟border距離加大 */
+        padding: 20px; /*讓icon跟border距離加大 */
         margin: 6px;
     }
     .header_icon i {
@@ -98,11 +101,11 @@ header .footer_icon {
     }
     header nav a {
         font-size: 17px;
-        margin: .3em;
+        margin: .35em;
     }
     .header_icon a {
         padding: 0;
-        margin: 2px;
+        margin: 5px;
     }
     .header_icon i {
         font-size: 22px;
@@ -117,7 +120,7 @@ header .footer_icon {
         border-radius: 15%;
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: 2%;
         transform: translateY( -50% );
         cursor: pointer;
     }
@@ -156,8 +159,11 @@ header .footer_icon {
         transition: top .2s 0s, rotate .3s .3s;
     }
     .header_icon {
-        margin-right: 65px;
+        margin-right: 10%;
         font-size: 22px;
+    }
+    .header_icon a {
+        margin: 3px
     }
     header nav {
         width: 80%;
@@ -226,10 +232,17 @@ header .footer_icon {
     }
 }
 @media screen and (max-width:430px) {
-
+    header .container {
+        padding: 0;
+    }
+    .header_icon {
+        margin-right: 13%;
+    }
 }
 @media screen and (max-width:390px) {
-
+    .header_icon {
+        margin-right: 14%;
+    }
 }
 /* footer nav */
 .material-symbols-outlined {

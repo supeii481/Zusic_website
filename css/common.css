@@ -4,7 +4,7 @@ body, button, input, select, textarea {
 }
 /* 瀏覽器會為 <button>、<input>、<select> 和 <textarea> 等表單元素設定一套強制的預設樣式 */
 .container {
-    max-width: 1280px;/* TODO:測試的螢幕小於1920會壞掉，所以先用筆電的預設 */
+    max-width: 1280px;/* TODO:測試的電腦原是1920px，但通常預設150%=1280px,所以先用這個預設,之後可改1440px */
     height: 100%;/* 讓 container 繼承 navbar 的高度 */
     margin: 0 auto;
     position: relative;
@@ -27,11 +27,13 @@ body, button, input, select, textarea {
 @media screen and (max-width:430px) {
     .container {
     max-width: 430px;
+    padding: 15px;
     }
 }
 @media screen and (max-width:390px) {
     .container {
     max-width: 390px;
+    padding: 10px;
     }
 }
 h1 {
