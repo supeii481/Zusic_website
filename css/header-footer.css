@@ -397,7 +397,7 @@ footer nav {
         flex-direction: column;
     }
     .footer_logo {
-        height: 70px;
+        height: 100px;
         position: relative;
         align-self: flex-start;
         order: 1;
