@@ -9,33 +9,6 @@ body, button, input, select, textarea {
     margin: 0 auto;
     position: relative;
 }
-@media screen and (max-width:1280px) {
-    .container {
-    max-width: 1130px;
-    }
-}
-@media screen and (max-width:1024px) {
-    .container {
-    max-width: 920px;
-    }
-}
-@media screen and (max-width:810px) {
-    .container {
-    max-width: 810px;
-    }
-}
-@media screen and (max-width:430px) {
-    .container {
-    max-width: 430px;
-    padding: 15px;
-    }
-}
-@media screen and (max-width:390px) {
-    .container {
-    max-width: 390px;
-    padding: 10px;
-    }
-}
 h1 {
     font-size: 35px;
     font-weight: bold;
@@ -74,16 +47,19 @@ h3 {
     padding: 0 0.2em;
     line-height: 2em ;
 }
-.second-p, .normal-p {
+.second-p {
     font-size: 20px;
     color: black;
     letter-spacing: 1px;
     padding: 0.2em;
 }
 .normal-p {
+    color: black;
     font-size: 24px;
     line-height: 2em ;
     margin: 1em 4em 1em 4em;
+    letter-spacing: 1px;
+    padding: 0.2em;
     /* text-indent: 2.5em; */
 }
 .normal_btn {
@@ -178,4 +154,79 @@ input, textarea, select{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+}
+@media screen and (max-width:1280px) {
+    .container {
+    max-width: 1130px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .container {
+        max-width: 920px;
+    }
+    h1 {
+        font-size: 28px;
+        letter-spacing: 0.3em;
+    }
+    h2 { 
+        font-size: 25px;
+        letter-spacing: 0.2em;
+        padding: 1.5em;
+        margin: 20px;
+    }
+    h3 {
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        line-height: 1.5em ;
+    }
+    .second-p {
+        font-size: 18px;
+    }
+    .normal-p {
+        font-size: 20px;
+        line-height: 1.8em ;
+        margin: 1em 2em;
+        letter-spacing: 1px;
+        padding: 0.2em;
+    }
+}
+@media screen and (max-width:810px) {
+    .container {
+    max-width: 810px;
+    }
+}
+@media screen and (max-width:430px) {
+    .container {
+    max-width: 430px;
+    padding: 15px;
+    }
+    h1 {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+    h2 { 
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        padding: 10px;
+        margin: 10px;
+    }
+    h3 {
+        font-size: 19px;
+        line-height: 1.7em;
+    }
+    .second-p {
+        font-size: 18.5px;
+        line-height: 1.5em;
+    }
+    .normal-p {
+        font-size: 18px;
+        line-height: 1.5em ;
+        margin: 1em 0;
+    }
+}
+@media screen and (max-width:390px) {
+    .container {
+    max-width: 390px;
+    padding: 10px;
+    }
 }
