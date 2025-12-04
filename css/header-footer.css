@@ -429,3 +429,12 @@ footer nav {
         height: auto;
     }
 }
+@media screen and (max-width:390px) {
+    footer li {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .footerbar {
+        font-size: 12px;
+    }
+}

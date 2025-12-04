@@ -16,12 +16,16 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.slogn {
+    height: 100px;
+    margin-top: -20%;
 }
 .slogn, .slogn h1 { /* 因為共通的css有設定過h1的樣式，所以要蓋過去  */
     font-size: 35px;
     color: #EE9F30;
     letter-spacing: 0.12em;
-    margin-top: -15%;
 }
 .slogn h1, .english_slogn {
     padding: 3% 0;
@@ -84,7 +88,6 @@
     }
     .slogn, .slogn h1 {
         font-size: 30px;
-        margin-top: -14%;
     }
     .english_slogn {
         padding: 2% 0;
@@ -94,7 +97,7 @@
     }
     .home_bannerpic :first-child {
         width: 120px;
-        left: -30px;
+        left: -35px;
         bottom: 10%;
     }
     .home_bannerpic :nth-child(2) {
@@ -106,8 +109,8 @@
         top: -5%;
     } 
     .home_bannerpic :last-child {
-        width: 120px;
-        right: -10px;
+        width: 110px;
+        right: 5px;
         bottom: 5%;
         transform: rotate(5deg);
     } 
@@ -118,8 +121,7 @@
         height: 400px;
     }
     .slogn, .slogn h1 {
-    font-size: 25px;
-    margin-top: -14%;
+        font-size: 25px;
     }
     .english_slogn {
         padding: 2% 0;
@@ -128,19 +130,19 @@
         font-size: 25px;
     }
     .home_bannerpic :first-child {
-        width: 100px;
-        left: -40px;
+        width: 90px;
+        left: -25px;
     }
     .home_bannerpic :nth-child(2) {
-        width: 290px;
+        width: 270px;
     } 
     .home_bannerpic :nth-child(3) {
-        width: 180px;
-        right: -40px;
+        width: 160px;
+        right: -10px;
     } 
     .home_bannerpic :last-child {
-        width: 100px;
-        right: -20px;
+        width: 90px;
+        right: -3px;
     } 
 }
 @media screen and (max-width:810px) {
@@ -150,7 +152,6 @@
     }
     .slogn, .slogn h1 {
         font-size: 20px;
-        margin-top: -15%;
         line-height: 1.25em;
     }
     .english_slogn {
@@ -162,7 +163,7 @@
         left: 0;
     }
     .home_bannerpic :nth-child(2) {
-        width: 220px;
+        width: 30vw;
     } 
     .home_bannerpic :nth-child(3) {
         width: 138px;
@@ -174,85 +175,97 @@
     } 
 }
 @media screen and (max-width:730px) {
-    .home_bannerpic :nth-child(odd), .home_bannerpic :last-child {
-        display: none;
-    }
-    .home_bannerpic :nth-child(2) {
-        width: 230px;
-    } 
-}
-@media screen and (max-width:430px) {
-    .home_bannerpic {
-        width: 100%;
-    }
-    .home_headerbanner_bg .slogn, .home_headerbanner_bg .container {
-        flex-direction: column;
+    .home_headerbanner_bg .container {
+        justify-content: end;
     }
     .home_headerbanner_bg {
         margin-top: 60px;
-        height: 300px;
+        height: 350px;
     }
-    .slogn, .slogn h1 {
-        font-size: 20px;
-        margin-top: 0;
-        line-height: 30px;
+    .slogn{
+        width: 80%;
+        position: absolute;
+        left: 10px;
+        margin-top:-200px;
     }
     .english_slogn {
-        font-size: 20px;
-        line-height: 10px;
+        margin: 0;
         padding: 0;
+        text-indent: 4em;
     }
-    .home_bannerpic :nth-child(odd), .home_bannerpic :last-child{
-        display: flex;
+    .home_bannerpic {
+        width: 60vw;
+        height: 40vw;
+        position: absolute;
+        margin-top: 60px;
     }
     .home_bannerpic :first-child {
-        width: 70px;
-        left: 55px;
-        bottom: 10px;
+        width: 10vw;
+        left: 7vw;
+        bottom: 20px;
     }
     .home_bannerpic :nth-child(2) {
-        width: 170px;
+        width: 25vw;
     } 
     .home_bannerpic :nth-child(3) {
-        width: 125px;
-        right: 45px;
-        top: -20px;
+        width: 17vw;
+        right: 6.5vw;
+        top: 0;
     } 
     .home_bannerpic :last-child {
-        width: 70px;
-        right: 65px;
-        bottom: 5px;
+        width: 10vw;
+        right: 8vw;
+        bottom: 20px;
     } 
+}
+@media screen and (max-width:630px) {
+    .home_headerbanner_bg {
+        height: 300px;
+    }
+    .slogn{
+        left: 15px;
+        margin-top:-140px;
+    }
+    .slogn, .slogn h1 {
+        font-size: 18px;
+        line-height: 1em;
+    }
+    .english_slogn {
+        font-size: 18px;
+        text-indent: 2em;
+    }
+    .home_bannerpic {
+        width: 60vw;
+        height: 42vw;
+    }
+}
+@media screen and (max-width:430px) {
+    .home_headerbanner_bg {
+        height: 230px;
+    }
+    .slogn {
+        margin-top: -80px;
+    }
+    .slogn, .slogn h1 {
+        font-size: 17px;
+        line-height: 15px;
+    } 
+    .english_slogn {
+        font-size: 17px;
+        line-height: 15px;
+        text-indent: 20px;
+    }
 }
 @media screen and (max-width:390px) {
     .home_headerbanner_bg {
         height: 200px;
     }
     .slogn, .slogn h1 {
-        font-size: 18px;
-        margin-top: 0;
-        line-height: 20px;
+        font-size: 16px;
     }
     .english_slogn {
-        font-size: 18px;
+        font-size: 16px;
     }
-    .home_bannerpic :first-child {
-        width: 50px;
-        left: 70px;
-    }
-    .home_bannerpic :nth-child(2) {
-        width: 110px;
-    } 
-    .home_bannerpic :nth-child(3) {
-        width: 80px;
-        right: 62.5px;
-        top: -10px;
-    } 
-    .home_bannerpic :last-child {
-        width: 45px;
-        right: 80px;
-        bottom: 5px;
-    } 
 }
 /* news */
 #news {
@@ -271,7 +284,8 @@
     margin: 0 1em;
 }
 .news1, .news2, .news3 {
-    font-size: 25px;width: 32%;
+    font-size: 25px;
+    width: 32%;
     border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -341,14 +355,176 @@
 #news .news1:hover, #news .news2:hover, #news .news3:hover {
     box-shadow: 1px 2px 15px 1px rgba(43, 76, 124, 0.3);
 }
+/* RWD-news */
+@media screen and (max-width:1024px) {
+    .news1, .news2, .news3 {
+        padding: 1em .5em;
+    }
+    .news_wrap1 p {
+        font-size: 24px;
+        letter-spacing: 0.3em;
+    }
+}
+@media screen and (max-width:930px) {
+    .news1, .news2, .news3 {
+        padding: 1em .5em;
+        flex-direction: column;
+    }
+    .news_wrap1 {
+        align-self: flex-start;
+        margin:  0 20px;
+        order: 1;
+    }
+    .news_wrap2 {
+        display: flex;
+        align-items: center;
+        order: 3;
+    }
+    .news_wrap3 {
+        order: 2;
+    }
+    .news_wrap3 img {
+        width: 90%;
+        margin: 5%;
+    }
+    .more_btnwrap {
+        order: 4;
+    }
+    #news .second-p {
+        margin-left: 13px;
+    }
+}
+@media screen and (max-width:810px) {
+    .home_newscard {
+        flex-direction: column;
+        align-items: center;
+    }
+    .news1, .news2, .news3 {
+        width: 70%;
+        height: 30vw;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        align-items: center; 
+        justify-content: space-evenly; /* 文字跟btn的垂直flex距離 */
+    }
+    .news_wrap1 {
+        width: 40%;
+        align-self: center;
+    }
+    .news_wrap2 {
+        width: 25vw;
+        order: 2; 
+    }
+    #news .second-p {
+        margin-left: 10px;
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+    .news_wrap3 {
+        width: 25vw;
+        order: 4;
+        margin-right: 3vw;
+    }
+    .news_wrap3 img {
+        width: 100%;
+        padding: 2%;
+    }
+    .more_btnwrap {
+        order: 3;
+        margin: 3px 0;
+    }
+}
+@media screen and (max-width:660px) {
+    .news1, .news2, .news3 {
+        height: 33vw;
+    }
+    .news_wrap1 p {
+        font-size: 22px;
+        letter-spacing: 5px;
+        line-height: 20px;
+    }
+    .news_wrap3 img {
+        padding: 0;
+    }
+}
+@media screen and (max-width:570px) {
+    .home_newscard {
+        justify-content: space-evenly;
+    }
+    .news1, .news2, .news3 {
+        height: 40vw;
+        width: 80%;
+        padding: 10px;
+    }
+    .news_wrap1 p {
+        font-size: 20px;
+        letter-spacing: 5px;
+        line-height: 20px;
+    }
+}
+/* ============================================= */
+@media screen and (max-width:430px) {
+    .home_newscard {
+        flex-wrap: nowrap;
+        margin-top: 20px;
+    }
+    .news1, .news2, .news3 {
+        width: 80%;
+        height: 280px;
+        margin: 0 auto 20px auto;
+        padding: 0;
+        align-items: center; 
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .news_wrap1 {
+        position: relative;
+        top: -3px ;
+        left: -30%;
+        width: 100%;
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .news_wrap1 p {
+        font-size: 20px;
+        align-self: center;
+    }
+    .news_wrap2 {
+        margin-top: -30px;
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 0 4px;
+    }
+    .news_wrap2 h3 {
+        align-self: center;
+    }
+    #news .second-p {
+        white-space: wrap;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+    .news_wrap3 {
+        width: 60%;
+        order: 3;
+        margin-right: 0;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .news_wrap3 img {
+        width: 80%;
+    }
+    .more_btnwrap {
+        order: 4;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+}
 /* hot */
-/* #home_hotinstrument {
-    background-image: url(../img/home_hot-bg.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center center;
-    overflow: hidden;
-} */
 #home_hotinstrument h2{
     background-image: url(../img/blob_purple.png);
     background-size: 9.5% auto;
@@ -443,9 +619,10 @@
 }
 .text {
     font-size: 20px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.15em;
     text-align: center;
     margin-top: 5%;
+    white-space: nowrap;
 }
 .text :last-child {
     text-align: right;
@@ -455,6 +632,185 @@
 }
 #news, #home_hotinstrument {
     padding-bottom: 25px;
+}
+@media screen and (max-width:1024px) {
+    .card-list {
+        border: 1px solid red;
+        justify-content: flex-start;
+        margin: 45px auto 0;
+        width: 100%;
+        /* 加上 padding 來製造最左邊的間距，與卡片間的 margin 相等 */
+        padding: 0 1.666%; /* 預計卡片之間間距的一半 */
+    }
+    .card {
+        width: 30%;
+        /* 使用 margin-right 建立卡片間距 */
+        margin: 0 1.666% 30px; /* 左右邊距都為 1.666% (總間距約 3.33%) */
+    }
+    .text {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+    }
+    [class*="degree_label"] {
+        top: 30px;
+        right: 5px;
+    }
+    [class*="degree_label"] span {
+        font-size: 18px;
+        width: 55px;
+        height: 35px;
+        line-height: 35px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 8px;
+        height: 8px;
+        top: 35px;
+    }
+    #news, #home_hotinstrument {
+        margin-bottom: -30px;/* 多了最下面card的margin */
+    }
+}
+@media screen and (max-width:810px) {
+    .card {
+        width: 30%;
+        /* 使用 margin-right 建立卡片間距 */
+        margin: 0 1.666% 25px; /* 左右邊距都為 1.666% (總間距約 3.33%) */
+    }
+    [class*="degree_label"] {
+        top: 25px;
+        right: 5px;
+    }
+    [class*="degree_label"] span {
+        font-size: 17px;
+        width: 45px;
+        height: 30px;
+        line-height: 30px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 6.5px;
+        height: 5px;
+        top: 30px;
+    }
+    .text {
+        font-size: 17px;
+        letter-spacing: 0;
+    }
+    #news, #home_hotinstrument {
+        margin-bottom: -25px;/* 多了最下面card的margin */
+    }
+}
+@media screen and (max-width:700px) {
+    [class*="degree_label"] {
+        top: 20px;
+        right: 5px;
+    }
+    [class*="degree_label"] span {
+        font-size: 16px;
+        width: 40px;
+        height: 25px;
+        line-height: 25px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 5px;
+        height: 4px;
+        top: 25px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:600px) {
+    .card-list {
+        justify-content: center;
+        margin: 35px 0 0 0;
+    }
+    .card {
+        width: 40vw;
+        margin-bottom: 18px;
+    }
+    [class*="degree_label"] {
+        top: 25px;
+        right: 2px;
+    }
+    [class*="degree_label"] span {
+        font-size: 16px;
+        width: 45px;
+        height: 30px;
+        line-height: 30px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 5px;
+        height: 4px;
+        top: 30px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    #news, #home_hotinstrument {
+        margin-bottom: -18px;/* 多了最下面card的margin */
+    }
+}
+@media screen and (max-width:480px) {
+    .card-list {
+        margin: 35px 0 0 0;
+    }
+    #news, #home_hotinstrument {
+        margin-bottom: -18px;/* 多了最下面card的margin */
+    }
+    .card {
+        width: 40vw;
+        margin-bottom: 10px;
+    }
+    .text {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    [class*="degree_label"] {
+        top: 15px;
+        right: 2px;
+    }
+    [class*="degree_label"] span {
+        font-size: 14px;
+        width: 40px;
+        height: 25px;
+        line-height: 25px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 5px;
+        height: 5px;
+        top: 25px;
+    }
+    #news, #home_hotinstrument {
+        margin-bottom: -18px;/* 多了最下面card的margin */
+    }
+}
+@media screen and (max-width:430px) {
+    .card-list {
+        margin: 20px 0 0 0;
+    }
+    .card {
+        width: 38vw;
+        margin-bottom: 10px;
+    }
+    .text {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+    [class*="degree_label"] {
+        top: 15px;
+        right: 2px;
+    }
+    [class*="degree_label"] span {
+        font-size: 14px;
+        width: 35px;
+        height: 25px;
+        line-height: 25px; /* 設定與 height 相同數值 */ 
+    }
+    .triangle {
+        width: 5px;
+        height: 5px;
+        top: 25px;
+    }
 }
 /* customer reviews */
 #home_customer_reviews h2{

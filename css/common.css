@@ -117,6 +117,9 @@ input, textarea, select{
 #contact .normal_btn, #login .normal_btn, #quicklyrent .normal_btn{
     width: 60%;
 }
+#contact .normal_btn a, #login .normal_btn a, #quicklyrent .normal_btn a {
+    text-align: center;
+}
 .img_btn {
     width: 100%;
     position: absolute;
@@ -157,7 +160,7 @@ input, textarea, select{
 }
 @media screen and (max-width:1280px) {
     .container {
-    max-width: 1130px;
+        max-width: 1130px;
     }
 }
 @media screen and (max-width:1024px) {
@@ -169,7 +172,7 @@ input, textarea, select{
         letter-spacing: 0.3em;
     }
     h2 { 
-        font-size: 25px;
+        font-size: 23px;
         letter-spacing: 0.2em;
         padding: 1.5em;
         margin: 20px;
@@ -181,6 +184,7 @@ input, textarea, select{
     }
     .second-p {
         font-size: 18px;
+        letter-spacing: 0;
     }
     .normal-p {
         font-size: 20px;
@@ -189,44 +193,111 @@ input, textarea, select{
         letter-spacing: 1px;
         padding: 0.2em;
     }
+    .normal_btn {
+        width: 110px;
+        height: 42px;
+        font-size: 20px;
+        border-radius: 15px;
+        letter-spacing: 0.1em;
+    }
 }
 @media screen and (max-width:810px) {
     .container {
-    max-width: 810px;
-    }
-}
-@media screen and (max-width:430px) {
-    .container {
-    max-width: 430px;
-    padding: 15px;
+        max-width: 810px;
     }
     h1 {
-        font-size: 22px;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.3em;
+        padding: 30px;
+        margin: 20px;
     }
     h2 { 
-        font-size: 20px;
-        letter-spacing: 0.2em;
-        padding: 10px;
+        letter-spacing: 0.1em;
+        padding: 1em;
         margin: 10px;
     }
     h3 {
         font-size: 19px;
-        line-height: 1.7em;
-    }
-    .second-p {
-        font-size: 18.5px;
-        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        line-height: 1.5em ;
     }
     .normal-p {
         font-size: 18px;
+        margin: 35px;
+        padding: 0;
+    }
+    .normal_btn {
+        width: 100px;
+        height: 38px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width:430px) {
+    .container {
+        max-width: 430px;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        padding: 20px;
+        margin: 10px;
+    }
+    h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        padding: 5px;
+        margin: 10px;
+    }
+    h3 {
+        font-size: 18px;
+        line-height: 1.7em;
+        text-align: center;
+    }
+    /* .second-p {
+        font-size: 17px;
+        line-height: 1.5em;
+    } */
+    .normal-p {
         line-height: 1.5em ;
         margin: 1em 0;
+    }
+    .normal_btn {
+        width: 90px;
+        height: 35px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width:390px) {
     .container {
-    max-width: 390px;
-    padding: 10px;
+        max-width: 390px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+        letter-spacing: 0;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    /* .second-p {
+        font-size: 15px;
+        line-height: 1.5em;
+    } */
+    .normal-p {
+        font-size: 15.5px;
+        line-height: 1.6em;
+        letter-spacing: 1px;
+    }
+    .normal_btn {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
     }
 }
