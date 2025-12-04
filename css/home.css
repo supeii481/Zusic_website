@@ -635,7 +635,6 @@
 }
 @media screen and (max-width:1024px) {
     .card-list {
-        border: 1px solid red;
         justify-content: flex-start;
         margin: 45px auto 0;
         width: 100%;
