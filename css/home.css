@@ -284,7 +284,6 @@
     margin: 0 1em;
 }
 .news1, .news2, .news3 {
-    font-size: 25px;
     width: 32%;
     border-radius: 5%;
     display: flex;
@@ -1088,7 +1087,7 @@
         height: 100px;
     }
 }
-@media screen and (max-width:410px) {
+@media screen and (max-width:430px) {
     .reasons_text {
         font-size: 18px;
         letter-spacing: 0.2em;

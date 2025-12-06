@@ -254,10 +254,10 @@ input, textarea, select{
         line-height: 1.7em;
         text-align: center;
     }
-    /* .second-p {
+    .second-p {
         font-size: 17px;
-        line-height: 1.5em;
-    } */
+        line-height: 1em;
+    }
     .normal-p {
         line-height: 1.5em ;
         margin: 1em 0;
