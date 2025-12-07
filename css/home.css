@@ -103,7 +103,7 @@
         bottom: 10%;
     }
     .home_bannerpic :nth-child(2) {
-        width: 350px;
+        width: 330px;
         left: 20%;
     } 
     .home_bannerpic :nth-child(3) {
@@ -138,7 +138,7 @@
     }
     .home_bannerpic :nth-child(2) {
         width: 270px;
-        left: 16%;
+        left: 18%;
     } 
     .home_bannerpic :nth-child(3) {
         width: 160px;
@@ -222,6 +222,11 @@
         width: 10vw;
         right: 8vw;
         bottom: 20px;
+    } 
+    .home_bannerpic :nth-child(2) {
+        width: 23vw;
+        left: 30%;
+        top: 25%;
     } 
 }
 @media screen and (max-width:630px) {
@@ -1118,6 +1123,7 @@
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
 }
+
 .decorative-circle {
     position: absolute; 
     animation-timing-function: ease-in-out; 
@@ -1143,7 +1149,19 @@
     animation-duration: 3s;
     animation-delay: .3s; 
 }
+/* RWD */
+@media screen and (max-width:700px) {
+    @keyframes float-large {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
 
+/* -- 15px 中等幅度浮動 -- */
+@keyframes float-medium {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+}
 /* banner文字動畫 */
 /* 1. 定義初始狀態：文字在畫面外、透明、且縮小 */
 .main-title, .sub-title {

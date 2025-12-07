@@ -43,12 +43,12 @@ nav li a:hover {
     transition: border 0.3s, color 0.3s; /*慢點變色 */
 }
 .header_icon {
-    font-size: 25px;
     display: flex;
     padding: 1%;
 }
-.header_icon a {
+.header_icon a, .user_icon {
     color: #2B4C7C;
+    font-size: 25px;
 }
 .user_icon, .cart_icon {
     display: flex;/* 每個圖示字元所佔據的字元寬度在字體檔案中是不同的,確保這兩個 icon 的邊框框起來是完美的、統一的正方形 */
@@ -84,8 +84,8 @@ header .footer_icon {
         font-size: 19px;
         margin: .7em;
     }
-    .header_icon a {
-        padding: 20px; /*讓icon跟border距離加大 */
+    .cart_icon, .user_icon {
+        padding: 20px; /* 讓icon跟border距離加大 */
         margin: 6px;
     }
 }
@@ -100,7 +100,7 @@ header .footer_icon {
         font-size: 17px;
         margin: .6em;
     }
-    .header_icon a {
+    .header_icon a, .user_icon {
         padding: 0;
         margin: 5px;
     }
@@ -158,7 +158,7 @@ header .footer_icon {
     .header_icon {
         margin-right: 10%;
     }
-    .header_icon a {
+    .header_icon a, .user_icon {
         margin: 3px
     }
     header nav {

@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //燈箱//
-$("button.btn_modal").on("click",function(){
+$(".user_icon").on("click",function(){
     $("#lightbox").removeClass("none");
 });
-$("button.btn_modal_close").on("click",function(){
+$(".user_icon_close").on("click",function(){
     $("#lightbox").addClass("none");
 });
 $("#lightbox").on("click",function(){

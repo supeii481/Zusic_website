@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/quickly_rent.css">
 </head>
 <body>
-        <!-- header -->
+    <!-- header -->
     <header>
         <div class="navbar">
             <div class="container">
@@ -50,9 +51,49 @@
                     </div>
                 </nav>
                 <div class="header_icon">
-                    <a href="login.html" class="user_icon">
+                    <button class="user_icon">
                         <i class="fa-solid fa-user-gear" alt="user_icon" title="member area"></i>
-                    </a>
+                    </button>
+                    <div id="lightbox" class="none">
+                        <article id="login">
+                            <div class="login_wrap">
+                                <div class="normal_form">
+                                    <h2 class="h2_line">帳號登入</h2>
+                                    <button class="leave_icon user_icon_close">
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <div class="form_wrap">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" id="email" name="email" required placeholder="電子信箱">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" id="user-password" name="password" required placeholder="密碼">
+                                                <i class="fa-solid fa-eye-slash"></i>
+                                            </div>
+                                        </form>
+                                        <button type="submit" class="normal_btn">登入</button>
+                                        <div class="else">
+                                            <a href="#">
+                                                <p class="login_text">忘記密碼</p>
+                                            </a>
+                                            <a href="#">
+                                                <p class="login_text">立即註冊</p>
+                                            </a>
+                                        </div>
+                                        <div class="morechoose-wrap">
+                                            <p class="morechoose">更多登入方式</p>
+                                        </div>
+                                        <div class="social_media_icon">
+                                            <img src="img/login_img/google_icon.svg" alt="google_icon">
+                                            <img src="img/login_img/fb_icon.svg" alt="fb_icon">
+                                            <img src="img/login_img/line_icon.svg" alt="line_icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                     <a href="#" class="cart_icon">
                         <i class="fa-solid fa-cart-shopping" alt="cart_icon" title="cart"></i>
                     </a>
@@ -68,7 +109,7 @@
         <div class="quicklyrent_headerbanner_smbg"></div>
     </header>
     <!-- quicklyrent -->
-    <article id="quicklyrent" class="fade-in">
+    <article id="quicklyrent">
         <div class="container">
             <h1>單日快速租借專區-不挑款</h1>
             <div class="quickly_box">
@@ -129,8 +170,8 @@
     <div class="middle_bg"></div>
     <section class="fade-in">
         <div class="container">
-            <div class="content">
-                <h3  id="typing-text"></h3>
+            <div class="content fade-in">
+                <h3 id="typing-text"></h3>
                 <p class="normal-p">有臨時活動、突然想練手感，或只是想來個音樂一日遊？「Zusic 租樂趣」就是你的救急神隊友！<br>這裡專為追求效率的你打造：你只需告訴我們「想租哪種樂器」、「你的程度/用途」，以及「預算範圍」，我們立刻為你篩選出合適的庫存。流程極簡化，讓你 30 秒內鎖定樂器，馬上出發！</p>
                 <p class="normal-p">【規則超簡單！】<br>所有樂器均採當日借、當日還（例如：早上取件/收貨，當日閉店前/物流截止前歸還）。重點來囉~只要選擇本專區，所有單日租金立刻享 9 折優惠！零壓力體驗音樂，馬上省一筆！快來租租看吧~<br>如當日來不及歸還，單日租金 9 折優惠即取消，並計點一次，累積滿三次，往後就不能享有本優惠囉!記得要好好按照時間歸還歐~</p>
             </div>
@@ -170,9 +211,9 @@
             </div>
         </div>
     </footer>
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
     <script src="./js/common.js"></script>
     <!-- 打字機效果 -->
-    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
             // 1. 定義要顯示的文字

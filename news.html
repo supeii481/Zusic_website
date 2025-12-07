@@ -16,11 +16,12 @@
     <!-- 共通的css -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
-        <!-- header -->
+    <!-- header -->
     <header>
         <div class="navbar">
             <div class="container">
@@ -49,9 +50,49 @@
                     </div>
                 </nav>
                 <div class="header_icon">
-                    <a href="login.html" class="user_icon">
+                    <button class="user_icon">
                         <i class="fa-solid fa-user-gear" alt="user_icon" title="member area"></i>
-                    </a>
+                    </button>
+                    <div id="lightbox" class="none">
+                        <article id="login">
+                            <div class="login_wrap">
+                                <div class="normal_form">
+                                    <h2 class="h2_line">帳號登入</h2>
+                                    <button class="leave_icon user_icon_close">
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <div class="form_wrap">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" id="email" name="email" required placeholder="電子信箱">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" id="user-password" name="password" required placeholder="密碼">
+                                                <i class="fa-solid fa-eye-slash"></i>
+                                            </div>
+                                        </form>
+                                        <button type="submit" class="normal_btn">登入</button>
+                                        <div class="else">
+                                            <a href="#">
+                                                <p class="login_text">忘記密碼</p>
+                                            </a>
+                                            <a href="#">
+                                                <p class="login_text">立即註冊</p>
+                                            </a>
+                                        </div>
+                                        <div class="morechoose-wrap">
+                                            <p class="morechoose">更多登入方式</p>
+                                        </div>
+                                        <div class="social_media_icon">
+                                            <img src="img/login_img/google_icon.svg" alt="google_icon">
+                                            <img src="img/login_img/fb_icon.svg" alt="fb_icon">
+                                            <img src="img/login_img/line_icon.svg" alt="line_icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                     <a href="#" class="cart_icon">
                         <i class="fa-solid fa-cart-shopping" alt="cart_icon" title="cart"></i>
                     </a>
@@ -71,7 +112,7 @@
         <div class="container">
             <h1>最新消息</h1>
             <div class="content">
-                <img src="img/news-img/news_studentcard.png" alt="">
+                <img src="img/news-img/news_studentcard.png">
                 <h3 id="typing-text"></h3>
                 <p class="normal-p fade-in">親愛的學生樂迷們，準備好讓你的練習時間大爆發了嗎？「Zusic 租樂趣」知道你們對音樂的熱情擋不住，也知道每一分鐘的練習都超級寶貴！我們決定來場最任性的「練功加碼送」限時活動！<br><br>只要你是學生，於任意門市憑有效學生證件，並成功租借任一樂器滿一個月，我們就免費多送你一週的練習時間！沒錯！多一週的時間，你可以把新學的曲子練到更熟練，可以在期末考前衝刺，或是純粹享受多出來的音樂時光！這完全符合我們的「租期不制式」承諾，讓你練個過癮、玩個開心！別再擔心時間不夠用，別再讓音樂夢卡關！<br><br>快來「Zusic 租樂趣」鎖定你的夢想樂器，讓你的音樂旅程，因為多出來的七天，變得更加精彩又充實！數量有限，現在就行動吧！</p>
             </div>
@@ -145,9 +186,9 @@
         </div>
     </footer>
 
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
     <script src="./js/common.js"></script>
     <!-- 打字機效果 -->
-    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
             // 1. 定義要顯示的文字

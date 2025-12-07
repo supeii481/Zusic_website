@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/service_center.css">
     <!-- jquery css -->
@@ -24,7 +25,7 @@
     <link rel="stylesheet" href="./vendors/slick/slick-theme.css">
 </head>
 <body>
-        <!-- header -->
+    <!-- header -->
     <header>
         <div class="navbar">
             <div class="container">
@@ -53,9 +54,49 @@
                     </div>
                 </nav>
                 <div class="header_icon">
-                    <a href="login.html" class="user_icon">
+                    <button class="user_icon">
                         <i class="fa-solid fa-user-gear" alt="user_icon" title="member area"></i>
-                    </a>
+                    </button>
+                    <div id="lightbox" class="none">
+                        <article id="login">
+                            <div class="login_wrap">
+                                <div class="normal_form">
+                                    <h2 class="h2_line">帳號登入</h2>
+                                    <button class="leave_icon user_icon_close">
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <div class="form_wrap">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" id="email" name="email" required placeholder="電子信箱">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" id="user-password" name="password" required placeholder="密碼">
+                                                <i class="fa-solid fa-eye-slash"></i>
+                                            </div>
+                                        </form>
+                                        <button type="submit" class="normal_btn">登入</button>
+                                        <div class="else">
+                                            <a href="#">
+                                                <p class="login_text">忘記密碼</p>
+                                            </a>
+                                            <a href="#">
+                                                <p class="login_text">立即註冊</p>
+                                            </a>
+                                        </div>
+                                        <div class="morechoose-wrap">
+                                            <p class="morechoose">更多登入方式</p>
+                                        </div>
+                                        <div class="social_media_icon">
+                                            <img src="img/login_img/google_icon.svg" alt="google_icon">
+                                            <img src="img/login_img/fb_icon.svg" alt="fb_icon">
+                                            <img src="img/login_img/line_icon.svg" alt="line_icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                     <a href="#" class="cart_icon">
                         <i class="fa-solid fa-cart-shopping" alt="cart_icon" title="cart"></i>
                     </a>
@@ -70,7 +111,7 @@
         </div>
         <div class="servicecenter_headerbanner_smbg"></div>
     </header>
-    <section id="servicecenter" class="fade-in">
+    <section id="servicecenter">
         <div class="container">
             <h1>服務據點</h1>
             <div class="classbtn_wrap">
@@ -192,7 +233,7 @@
             </div>
         </div>
     </footer>
-    <script src="./js/common.js"></script>
     <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./js/common.js"></script>
 </body>
 </html>
