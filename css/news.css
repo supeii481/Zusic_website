@@ -2,6 +2,9 @@
 .news_headerbanner_smbg {
     margin-top: 100px;
     background-image: url("../img/news-img/news-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* 確保超出容器的圖片不會顯示滾動條 */
 }
 .content img {
     width: 60%;
@@ -113,6 +116,7 @@ article {
 }
 @media screen and (max-width:810px) {
     .news_headerbanner_smbg {
+        background-image: url("../img/news-img/news-bg-pad.jpg");
         margin-top: 55px;
     }
     #news h1{
@@ -156,6 +160,7 @@ article {
 @media screen and (max-width:430px) {
     .news_headerbanner_smbg {
         margin-top: 60px;
+        background-image: url("../img/news-img/news-bg-phone.jpg");
     }
     #news h1{
         background-size: 50px auto;

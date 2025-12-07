@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/home.css">
     <!-- 此頁面的css -->
     <link rel="stylesheet" href="css/service_center.css">
+    <!-- jquery css -->
+    <link rel="stylesheet" href="./vendors/slick/slick.css">
+    <link rel="stylesheet" href="./vendors/slick/slick-theme.css">
 </head>
 <body>
         <!-- header -->
@@ -32,9 +35,9 @@
                 <nav>
                     <ul>
                         <li><a href="news.html">最新消息</a></li>
-                        <li><a href="rent.html">樂器租借</a></li>
-                        <li><a href="quickly_rent.html">單日快速租借專區</a></li>
                         <li><a href="about_us.html">關於租樂趣</a></li>
+                        <li><a href="quickly_rent.html">單日快速租借專區</a></li>
+                        <li><a href="rent.html">樂器租借</a></li>
                         <li><a href="service_center.html">服務據點</a></li>
                     </ul>
                     <div class="footer_icon">
@@ -78,8 +81,7 @@
                 <button class="normal_btn">高雄市</button>
             </div>
             <div class="location">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2490359444314!2d121.22244777486975!3d24.95764034136296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823fac6cda909%3A0x2d20ec0cb35c6f9a!2z57ev6IKyVGliYU1l!5e0!3m2!1szh-TW!2stw!4v1763538859042!5m2!1szh-TW!2stw" width="700
-                " height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2490359444314!2d121.22244777486975!3d24.95764034136296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823fac6cda909%3A0x2d20ec0cb35c6f9a!2z57ev6IKyVGliYU1l!5e0!3m2!1szh-TW!2stw!4v1763538859042!5m2!1szh-TW!2stw"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="information">
                     <h3>Zusic 租樂趣(總店)</h3>
                     <div class="information_content">
@@ -96,19 +98,66 @@
         <div class="shop">
             <div class="container">
                 <div class="shopimg_wrap">
-                    <img src="img/service_center-img/shop1.jpg" alt="">
-                    <img src="img/service_center-img/shop2.jpg" alt="">
-                    <img src="img/service_center-img/shop3.jpg" alt="">
+                    <div><img src="img/service_center-img/shop1.jpg" alt="Zusic 租樂趣總店"></div>
+                    <div><img src="img/service_center-img/shop2.jpg" alt="Zusic 租樂趣總店"></div>
+                    <div><img src="img/service_center-img/shop3.jpg" alt="Zusic 租樂趣總店"></div>
+                    <div><img src="img/service_center-img/shop4.jpg" alt="Zusic 租樂趣總店"></div>
+                    <div><img src="img/service_center-img/shop5.jpg" alt="Zusic 租樂趣總店"></div>
+                    <div><img src="img/service_center-img/shop6.jpg" alt="Zusic 租樂趣總店"></div>
                 </div>
-                <div class="arrowbtn_wrap1">
+                <!-- <div class="arrowbtn_wrap1">
                     <button class="arrow_btn"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 <div class="arrowbtn_wrap2">
                     <button class="arrow_btn"><i class="fa-solid fa-angle-right"></i></button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
+    <!-- 圖片輪播 -->
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script>
+        $(".shopimg_wrap").slick({
+            arrows: true,
+            dots: true,
+            centerMode: true,
+            centerPadding: "30%",
+            slidesToShow:1,
+            responsive: [{ //響應式設定
+                breakpoint: 1024, //
+                settings: {
+                    centerPadding: "33%",
+                    slidesToShow: 1,
+                }
+            },{
+                breakpoint: 880,
+                settings: {
+                    centerPadding: "30%",
+                    slidesToShow: 1,
+                }
+            },{
+                breakpoint: 750,
+                settings: {
+                    centerPadding: "10%",
+                    slidesToShow: 2,
+                }
+            },{
+                breakpoint: 650,
+                settings: {
+                    centerPadding: "30%",
+                    slidesToShow: 1,
+                }
+            },,{
+                breakpoint: 430,
+                settings: {
+                    arrows: false,
+                    centerPadding: "30%",
+                    slidesToShow: 1,
+                }
+            }]
+        });
+    </script>
     <!-- footer -->
     <footer>
         <div class="navbar">

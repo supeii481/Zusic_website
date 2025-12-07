@@ -179,6 +179,7 @@
         justify-content: end;
     }
     .home_headerbanner_bg {
+        background-image: url(../img/home_banner-bg-pad.jpg);
         margin-top: 60px;
         height: 350px;
     }
@@ -241,6 +242,7 @@
 }
 @media screen and (max-width:430px) {
     .home_headerbanner_bg {
+        background-image: url(../img/home_banner-bg-phone.jpg);
         height: 230px;
     }
     .slogn {

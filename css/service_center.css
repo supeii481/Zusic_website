@@ -2,6 +2,9 @@
 .servicecenter_headerbanner_smbg {
     margin-top: 100px;
     background-image: url("../img/service_center-img/service_center-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* 確保超出容器的圖片不會顯示滾動條 */
 }
 #servicecenter h1{
     background-image: url(../img/service_center-img/blob_blue.png);
@@ -14,17 +17,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3em;
+    margin: 0 0 3em 0;
 }
 /* information */
 .location {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin: 4em;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.location iframe {
+    width: 800px;
+    height: 800px;
 }
 .information {
-    margin-left: 3em;
+    width: 400px;
 }
 .information_content {
     display: flex;
@@ -45,14 +53,16 @@
     right: 3em;
 }
 .information_content p {
-    font-family: "Noto Sans TC";
     font-size: 16px;
-    color: black;
     letter-spacing: 0.2em;
     line-height: 2em ;
 }
 .information .normal_btn {
-    margin: 1em 1em 1em 0;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
 }
 #servicecenter .container {
     margin-bottom: 5em;
@@ -60,7 +70,7 @@
 /* shopimg */
 .shop {
     background-image: url(../img/service_center-img/shopimg_bg.png);
-    height: 675px;
+    height: 600px;
     background-size: cover;
     background-repeat: repeat;
     background-position: center center;
@@ -68,24 +78,175 @@
 }
 .shop .container {
     position: relative;
-}    
-.shopimg_wrap {
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    margin: 4em 0;
+}
+.shop .container .shopimg_wrap {
+    margin: auto;
+    width: 90%;
 }
 .shopimg_wrap img {
-    width: 40%;
-    margin: 1em;
+    width: 100%;
     border-radius: 20px;
 }
-.shopimg_wrap :nth-child(odd) {
+.shopimg_wrap .slick-slide {
+    padding: 0 20px; /* 用padding來設間距 */
+}
+
+/* .shopimg_wrap :nth-child(odd) {
     opacity: .5;
 }
 .shopimg_wrap img:nth-child(odd) {
     width: 25%;
     margin: 1em;
     border-radius: 20px;
+} */
+/* RWD */
+@media screen and (max-width:1280px) {
+    .servicecenter_headerbanner_smbg {
+        margin-top: 90px;
+    }
+    #servicecenter h1 {
+        background-size: 80px auto;
+        background-position: left 45% center;
+    }
+    .location iframe {
+        width: 650px;
+        height: 650px;
+    }
+    .information {
+        width: 350px;
+    }
+    .shop {
+        height: 525px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .servicecenter_headerbanner_smbg {
+        margin-top: 80px;
+    }
+    #servicecenter h1 {
+        background-size: 80px auto;
+        background-position: left 45% center;
+    }
+    .location iframe {
+        width: 500px;
+        height: 450px;
+    }
+    .information {
+        width: 325px;
+    }
+    .information_content p {
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+    }
+    .classbtn_wrap {
+        margin: 0 0 2em 0;
+    }
+    .shop {
+        height: 400px;
+    }
+}
+@media screen and (max-width:880px) {
+    .location iframe {
+        width: 450px;
+        height: 450px;
+    }
+    .shopimg_wrap .slick-slide {
+        padding: 0 15px; /* 用padding來設間距 */
+    }
+}
+@media screen and (max-width:810px) {
+    .servicecenter_headerbanner_smbg {
+        background-image: url("../img/service_center-img/service_center-bg-pad.jpg");
+        margin-top: 55px;
+    }
+    #servicecenter h1 {
+        background-size: 70px auto;
+        background-position: left 42% center;
+    }
+    .location {
+        flex-direction: column;
+    }
+    .location iframe {
+        width: 90%;
+        height: 300px;
+        padding: 0 1em 1em 1em;
+    }
+    .information {
+        width: 380px;
+    }
+    .information h3 {
+        padding: 1em 0;
+    }
+    .information_content p {
+        font-size: 18px;
+    }
+    #servicecenter .container {
+        margin-bottom: 3em;
+    }
+    .shop {
+        height: 350px;
+    }
+}
+@media screen and (max-width:650px) {
+    #servicecenter h1 {
+        background-size: 75px auto;
+        background-position: left 40% center;
+    }
+    #servicecenter .classbtn_wrap .normal_btn {
+        font-size: 16px;
+    }
+    .shop {
+        height: 260px;
+    }
+    .shop .container .shopimg_wrap {
+        width: 90%;
+    }
+    .shopimg_wrap .slick-slide {
+        padding: 0 10px; /* 用padding來設間距 */
+    }
+}
+@media screen and (max-width:430px) {
+    .servicecenter_headerbanner_smbg {
+        background-image: url("../img/service_center-img/service_center-bg-phone.jpg");
+        margin-top: 60px;
+    }
+    #servicecenter h1 {
+        background-size: 50px auto;
+    }
+    #servicecenter .classbtn_wrap .normal_btn {
+        font-size: 15px;
+    }
+    .location iframe {
+        width: 100%;
+        height: 200px;
+        padding-bottom: 0;
+    }
+    .information {
+        width: 350px;
+    }
+    .information h3 {
+        padding: 5px 0;
+    }
+    .classbtn_wrap {
+        margin: 0 0 1em 0;
+    }
+    .information_content p {
+        font-size: 16px;
+    }
+    #servicecenter .container {
+        margin-bottom: 2em;
+    }
+    .shop {
+        height: 220px;
+    }
+    .shop .container .shopimg_wrap {
+        width: 100%;
+    }
+    .shopimg_wrap .slick-slide {
+        padding: 0 5px; /* 用padding來設間距 */
+    }
 }

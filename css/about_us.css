@@ -2,6 +2,9 @@
 .about_headerbanner_smbg {
     margin-top: 100px;
     background-image: url("../img/about_us-img/about_us-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* 確保超出容器的圖片不會顯示滾動條 */
 }
 #about h1 {
     background-image: url(../img/about_us-img/blob_brown.png);
@@ -79,6 +82,9 @@
     justify-content: center;
     position: relative;
 }
+#contact .normal_form {
+    width: 500px;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -107,7 +113,7 @@ textarea {
     height: 200px;
 }
 #contact .normal_btn {
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 .watermark3 {
     position: absolute;
@@ -116,4 +122,165 @@ textarea {
     max-width: 30%;
     opacity: .3;
     transform: rotate(-30deg);
+}
+/* RWD */
+@media screen and (max-width:1280px) {
+    .about_headerbanner_smbg {
+        margin-top: 90px;
+    }
+    .normal-p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+@media screen and (max-width:1024px) {
+    .about_headerbanner_smbg {
+        background-image: url("../img/about_us-img/about_us-bg-pad.jpg");
+        margin-top: 80px;
+    }
+    #about h1 {
+        background-size: 80px auto;
+        background-position: left 45% center;
+    }
+    #contact .normal_form {
+        width: 480px;
+        padding: 1em 2em 0 2em;
+    }
+    .form-group {
+        margin: 0.1em 0;
+    }
+    .form-group label {
+        font-size: 22px; /* 調整 label 文字大小 */
+        margin-bottom: 0.4em; /* 增加標籤與輸入框間距 */
+    }
+    .form-group input, textarea {
+        font-size: 22px; 
+        margin-bottom: 0.3em; /* 增加標籤與輸入框間距 */
+    }
+    textarea {
+        height: 180px;
+    }
+    .watermark3 {
+        right: 0;
+        bottom: 10%;
+    }
+}
+@media screen and (max-width:810px) {
+    .about_headerbanner_smbg {
+        margin-top: 55px;
+    }
+    #about h1 {
+        background-size: 70px auto;
+        background-position: left 42% center;
+    }
+    .promise {
+        height: 180px;
+    }
+    form {
+        padding: 1em;
+    }
+}
+@media screen and (max-width:700px) {
+    .promise {
+        height: 165px;
+        column-gap: .5em;
+    }
+    #contact .normal_form {
+        width: 450px;
+        padding: 1em 2em 0 2em;
+    }
+    .form-group label {
+        font-size: 20px; /* 調整 label 文字大小 */
+    }
+    .form-group input, textarea {
+        font-size: 20px; 
+    }
+    textarea {
+        height: 160px;
+    }
+    .watermark3 {
+        right: 0;
+        bottom: 10%;
+    }
+}
+@media screen and (max-width:650px) {
+    #about h1 {
+        background-size: 75px auto;
+        background-position: left 40% center;
+    }
+    .content_wrap {
+        flex-direction: column;
+    }
+    .content_wrap p {
+        width: 85%;
+        margin-top: 1em;
+    }
+    #brand .content_wrap :first-child {
+        order: 3;
+    }
+    #brand .content_wrap :nth-child(2)  {
+        order: 2;
+    }
+    #brand .content_wrap :last-child {
+        order: 1;
+    }
+    .promise {
+        height: 150px;
+        column-gap: .5em;
+    }
+    #contact .h2_line {
+        margin: 5px 0;
+    }
+    #contact .normal_form {
+        width: 450px;
+        margin: 70px 5%;
+    }
+    .form-group label {
+        font-size: 18px; /* 調整 label 文字大小 */
+    }
+    .form-group input, textarea {
+        font-size: 18px; 
+    }
+    textarea {
+        height: 140px;
+    }
+}
+@media screen and (max-width:430px) {
+    .about_headerbanner_smbg {
+        background-image: url("../img/about_us-img/about_us-bg-phone.jpg");
+        margin-top: 60px;
+    }
+    #about h1 {
+        background-size: 50px auto;
+    }
+    .promise {
+        height: 130px;
+        column-gap: .3em;
+        padding: 0;
+    }
+    [class*="blob"] p {
+        font-size: 12px;
+    }
+    [class*="blob"] i {
+        font-size: 15px;
+        padding: 0.1em;
+    }
+    #contact .normal_form {
+        width: 360px;
+        margin: 50px 2%;
+        padding: 10px 20px 0 20px;
+    }
+    #contact .h2_line {
+        margin: 0;
+    } 
+    .form-group label {
+        font-size: 16px; /* 調整 label 文字大小 */
+    }
+    .form-group input, textarea {
+        font-size: 16px; 
+    }
+    textarea {
+        height: 140px;
+    }
 }

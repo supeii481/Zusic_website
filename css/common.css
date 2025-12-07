@@ -110,9 +110,9 @@ label, input, textarea {
     letter-spacing: 1px;
 }
 input, textarea, select{
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid rgb(151, 147, 147);
-    padding: 0.5em;/* 輸入框和要打的字之間的間距 */
+    padding: 8px;/* 輸入框和要打的字之間的間距 */
 }
 #contact .normal_btn, #login .normal_btn, #quicklyrent .normal_btn{
     width: 60%;
@@ -128,25 +128,29 @@ input, textarea, select{
     display: flex;
     justify-content: space-between;
 }
-.arrowbtn_wrap1 button, .arrowbtn_wrap2 button {
-    font-size: 40px;
+.shop .slick-prev, .shop .slick-next {
+    font-size: 60px;
     font-weight: bold;
-    color: white;
-    background: #2B4C7C;
+    color: #2B4C7C;
+    background: white;
     border-radius: 100px;
-    width: 80px;
+    opacity: 1;
+    /* width: 80px;
     height: 80px;
-    margin: 1em;
-    display: flex;
+    margin: 1em; */
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
-.arrowbtn_wrap1 button:hover, .arrowbtn_wrap2 button:hover {
-    background: #EE9F30;
+.shop .slick-prev {
+    left: -62px;
+}
+.shop .slick-prev:hover, .shop .slick-next:hover {
+    color: #EE9F30;
     border: #EE9F30;
-    transition: border 0.3s, background 0.3s;
+    transition: border 0.3s, color 0.3s;
 }
-.arrowbtn_wrap1 {
+/* .arrowbtn_wrap1 {
     position: absolute;
     top: 50%;
     left: 0;
@@ -157,7 +161,7 @@ input, textarea, select{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-}
+} */
 @media screen and (max-width:1280px) {
     .container {
         max-width: 1130px;
@@ -200,7 +204,14 @@ input, textarea, select{
         border-radius: 15px;
         letter-spacing: 0.1em;
     }
-}
+    .shop .slick-prev, .shop .slick-next {
+        font-size: 50px;
+        top: 45%;
+    }
+    .shop .slick-dots li button:before {
+        font-size: 10px;
+    }
+} 
 @media screen and (max-width:810px) {
     .container {
         max-width: 810px;
@@ -230,6 +241,9 @@ input, textarea, select{
         height: 38px;
         font-size: 18px;
         border-radius: 10px;
+    }
+    [class*="smbg"] {
+        height: 200px;
     }
 }
 @media screen and (max-width:430px) {
@@ -266,6 +280,12 @@ input, textarea, select{
         width: 90px;
         height: 35px;
         font-size: 16px;
+    }
+    .shop .slick-dots li button:before {
+        font-size: 5px;
+    }
+    [class*="smbg"] {
+        height: 174px;
     }
 }
 @media screen and (max-width:390px) {
