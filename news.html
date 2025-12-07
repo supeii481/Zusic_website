@@ -72,11 +72,11 @@
             <h1>最新消息</h1>
             <div class="content">
                 <img src="img/news-img/news_studentcard.png" alt="">
-                <h3>⚡️學生請注意！史上最寵「練功加碼週」，Zusic租樂趣免費送！</h3>
-                <p class="normal-p">親愛的學生樂迷們，準備好讓你的練習時間大爆發了嗎？「Zusic 租樂趣」知道你們對音樂的熱情擋不住，也知道每一分鐘的練習都超級寶貴！我們決定來場最任性的「練功加碼送」限時活動！<br><br>只要你是學生，於任意門市憑有效學生證件，並成功租借任一樂器滿一個月，我們就免費多送你一週的練習時間！沒錯！多一週的時間，你可以把新學的曲子練到更熟練，可以在期末考前衝刺，或是純粹享受多出來的音樂時光！這完全符合我們的「租期不制式」承諾，讓你練個過癮、玩個開心！別再擔心時間不夠用，別再讓音樂夢卡關！<br><br>快來「Zusic 租樂趣」鎖定你的夢想樂器，讓你的音樂旅程，因為多出來的七天，變得更加精彩又充實！數量有限，現在就行動吧！</p>
+                <h3 id="typing-text"></h3>
+                <p class="normal-p fade-in">親愛的學生樂迷們，準備好讓你的練習時間大爆發了嗎？「Zusic 租樂趣」知道你們對音樂的熱情擋不住，也知道每一分鐘的練習都超級寶貴！我們決定來場最任性的「練功加碼送」限時活動！<br><br>只要你是學生，於任意門市憑有效學生證件，並成功租借任一樂器滿一個月，我們就免費多送你一週的練習時間！沒錯！多一週的時間，你可以把新學的曲子練到更熟練，可以在期末考前衝刺，或是純粹享受多出來的音樂時光！這完全符合我們的「租期不制式」承諾，讓你練個過癮、玩個開心！別再擔心時間不夠用，別再讓音樂夢卡關！<br><br>快來「Zusic 租樂趣」鎖定你的夢想樂器，讓你的音樂旅程，因為多出來的七天，變得更加精彩又充實！數量有限，現在就行動吧！</p>
             </div>
         </section>
-        <article>
+        <article class="fade-in">
             <div class="container">
                 <div class="next_btn">
                     <a href="news.html" class="normal_btn">上一則</a>
@@ -144,5 +144,41 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/common.js"></script>
+    <!-- 打字機效果 -->
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 1. 定義要顯示的文字
+            const textToType = "⚡️學生請注意！史上最寵「練功加碼週」，Zusic租樂趣免費送！"; 
+        
+            // 2. 選取要顯示文字的元素
+            const $targetElement = $("#typing-text"); 
+        
+            let charIndex = 0; // 當前要顯示的字元索引
+            const typingSpeed = 130; // 打字速度（毫秒，數字越小越快）
+
+            function typeWriter() {
+                // 檢查是否所有字元都已顯示完畢
+                if (charIndex < textToType.length) {
+                    // 將下一個字元添加到 HTML 元素中
+                    $targetElement.append(textToType.charAt(charIndex));
+                
+                    // 索引移動到下一個字元
+                    charIndex++;
+                
+                    // 設定定時器，在 typingSpeed 毫秒後再次呼叫 typeWriter 函式
+                    setTimeout(typeWriter, typingSpeed);
+                } else {
+                    // 當文字全部打完後，為元素添加類別以移除游標
+                    $targetElement.addClass("finished-typing");
+                }
+            }
+
+            // 啟動打字機效果
+            typeWriter();
+        });
+    </script>
 </body>
 </html>

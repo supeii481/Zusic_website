@@ -19,6 +19,8 @@
     position: relative;
 }
 .slogn {
+
+    width: 50%;
     height: 100px;
     margin-top: -20%;
 }
@@ -65,8 +67,8 @@
 }
 .home_bannerpic :nth-child(2) {
     width: 430px;
-    left: 50%;
-    top: 50%;
+    left: 15%;
+    top: 15%;
     transform: translate(-50%, -50%);
 }
 .home_bannerpic :nth-child(3) {
@@ -102,6 +104,7 @@
     }
     .home_bannerpic :nth-child(2) {
         width: 350px;
+        left: 20%;
     } 
     .home_bannerpic :nth-child(3) {
         width: 200px;
@@ -135,6 +138,7 @@
     }
     .home_bannerpic :nth-child(2) {
         width: 270px;
+        left: 16%;
     } 
     .home_bannerpic :nth-child(3) {
         width: 160px;
@@ -163,7 +167,8 @@
         left: 0;
     }
     .home_bannerpic :nth-child(2) {
-        width: 30vw;
+        width: 28vw;
+        left: 20%;
     } 
     .home_bannerpic :nth-child(3) {
         width: 138px;
@@ -1101,3 +1106,144 @@
         height: 80px;
     }
 }
+/* banner漂浮動畫 */
+/* -- 25px 大幅度浮動 -- */
+@keyframes float-large {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-25px); }
+}
+
+/* -- 15px 中等幅度浮動 -- */
+@keyframes float-medium {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+.decorative-circle {
+    position: absolute; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
+}
+.circle-1 {
+    animation-name: float-medium; 
+    animation-duration: 4s;
+    animation-delay: .8s; 
+}
+.circle-2{
+    animation-name: float-large;
+    animation-duration: 5s;
+    animation-delay: 0s; 
+}
+.circle-3 {
+    animation-name: float-medium; 
+    animation-duration: 4s; 
+    animation-delay: 0s; 
+}
+.circle-4 {
+    animation-name: float-medium; 
+    animation-duration: 3s;
+    animation-delay: .3s; 
+}
+
+/* banner文字動畫 */
+/* 1. 定義初始狀態：文字在畫面外、透明、且縮小 */
+.main-title, .sub-title {
+    opacity: 0; /* 隱藏元素 */
+    /* 確保元素可以接受 transform 屬性 */
+    display: inline-block; 
+}
+/* --- 定義主要標題的動畫 --- */
+@keyframes slideInZoom {
+    0% {
+        opacity: 0;
+        /* 1. 從左上方移出 (X: 向左 50px, Y: 向上 50px) */
+        /* 2. 初始縮小到 50% */
+        transform: translate(-50px, -50px) scale(0.8); 
+    }
+    100% {
+        opacity: 1;
+        /* 最終狀態：回到原始位置和大小 */
+        transform: translate(0, 0) scale(1);
+    }
+}
+/* --- 定義副標題的動畫 (純粹從左邊滑入) --- */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* 從左邊移出 50px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* 回到原始位置 */
+    }
+}
+
+/* 2. 應用動畫效果 */
+.main-title {
+    animation: slideInZoom 1s ease-out forwards;
+    /* 動畫名稱 | 運行時間 | 速度曲線 | 結束時保持最終狀態 */
+}
+
+.sub-title {
+    /* 讓副標題比主標題慢一點，創造層次感 */
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+/* chooseus 的 blob動畫 */
+@keyframes float-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.blob-item {
+    position: relative; 
+    animation-name: float-animation;
+    animation-timing-function: ease-in-out; /* 讓移動看起來更平滑自然 */
+    animation-iteration-count: infinite; /* 無限重複播放 */
+}
+.blob1 {
+    animation-duration: 5s;
+    animation-delay: 0s; 
+}
+.blob2 {
+    animation-duration: 7.5s;
+    animation-delay: 1.0s;
+}
+.blob3 {
+    animation-duration: 5s;
+    animation-delay: -1.5s;           
+}
+
+/* 評論向左滾動動畫 
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%); 
+    }
+    100% {
+        transform: translateX(-32%); 
+    }
+}
+.animation_wrap {
+    width: 100%; 
+    overflow: hidden; 
+}
+.reviews-list {
+    display: flex; 確保卡片排成一列
+    white-space: nowrap; 確保內容不會換行 
+    width: 200%; 
+    animation: scroll-left 18s linear infinite; 30s 速度，線性，無限循環 
+    transition: transform 0.7s ease-in-out; 
+}
+.reviews p {
+    white-space: wrap;
+}
+滑鼠懸停時暫停 
+.animation_wrap:hover .reviews-list {
+    animation-play-state: paused;
+}*/

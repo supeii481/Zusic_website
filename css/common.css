@@ -132,7 +132,6 @@ input, textarea, select{
     font-size: 60px;
     font-weight: bold;
     color: #2B4C7C;
-    background: white;
     border-radius: 100px;
     opacity: 1;
     /* width: 80px;
@@ -320,4 +319,47 @@ input, textarea, select{
         height: 30px;
         font-size: 14px;
     }
+}
+
+/* 淡入 */
+/* 1. 初始狀態 (隱藏) */
+.fade-in {
+    opacity: 0; /* 讓元素一開始是透明的（隱藏） */
+    transition: opacity 0.6s ease-out; /* 定義淡入的動畫效果和持續時間 */
+    /* (可選) 您也可以加入 transform 來實現輕微的上移效果 */
+    /* transform: translateY(20px); */
+}
+
+/* 2. 顯示狀態 (淡入後) */
+.fade-in.is-visible {
+    opacity: 1; /* 讓元素完全顯示 */
+    /* transform: translateY(0); /* (可選) 移除上移效果 */
+}
+
+/* 打字機浮標 */
+/* 1. 隱藏文字溢出，確保文字逐字出現 */
+#typing-text {
+    /* 確保元素可以容納文字，並讓游標在其後方 */
+    display: inline-block; 
+}
+/* 2. 使用 :after 偽元素作為閃爍游標 */
+#typing-text:after {
+    content: '|'; /* 游標符號 */
+    color: #000; /* 游標顏色 */
+    margin-left: 5px; /* 游標與文字間的間距 */
+    /* 應用閃爍動畫 */
+    animation: blink-caret 1s step-end infinite; 
+}
+/* 3. 定義閃爍動畫 */
+@keyframes blink-caret {
+    0%, 100% { 
+        opacity: .5; /* 游標顯示 */
+    }
+    50% { 
+        opacity: 0; /* 游標隱藏 */
+    }
+}
+/* 動畫完成後移除游標 */
+.finished-typing:after {
+    display: none;
 }

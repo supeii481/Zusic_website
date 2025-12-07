@@ -68,7 +68,7 @@
         <div class="quicklyrent_headerbanner_smbg"></div>
     </header>
     <!-- quicklyrent -->
-    <article id="quicklyrent">
+    <article id="quicklyrent" class="fade-in">
         <div class="container">
             <h1>單日快速租借專區-不挑款</h1>
             <div class="quickly_box">
@@ -127,10 +127,10 @@
         </div>
     </article>
     <div class="middle_bg"></div>
-    <section>
+    <section class="fade-in">
         <div class="container">
             <div class="content">
-                <h3> ⚡️ 隨時想練？選擇Zusic租樂趣，快樂馬上Get！還能享有優惠9折！</h3>
+                <h3  id="typing-text"></h3>
                 <p class="normal-p">有臨時活動、突然想練手感，或只是想來個音樂一日遊？「Zusic 租樂趣」就是你的救急神隊友！<br>這裡專為追求效率的你打造：你只需告訴我們「想租哪種樂器」、「你的程度/用途」，以及「預算範圍」，我們立刻為你篩選出合適的庫存。流程極簡化，讓你 30 秒內鎖定樂器，馬上出發！</p>
                 <p class="normal-p">【規則超簡單！】<br>所有樂器均採當日借、當日還（例如：早上取件/收貨，當日閉店前/物流截止前歸還）。重點來囉~只要選擇本專區，所有單日租金立刻享 9 折優惠！零壓力體驗音樂，馬上省一筆！快來租租看吧~<br>如當日來不及歸還，單日租金 9 折優惠即取消，並計點一次，累積滿三次，往後就不能享有本優惠囉!記得要好好按照時間歸還歐~</p>
             </div>
@@ -170,5 +170,40 @@
             </div>
         </div>
     </footer>
+    <script src="./js/common.js"></script>
+    <!-- 打字機效果 -->
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 1. 定義要顯示的文字
+            const textToType = "⚡️隨時想練？選擇Zusic租樂趣，快樂馬上Get！還能享有優惠9折！"; 
+        
+            // 2. 選取要顯示文字的元素
+            const $targetElement = $("#typing-text"); 
+        
+            let charIndex = 0; // 當前要顯示的字元索引
+            const typingSpeed = 130; // 打字速度（毫秒，數字越小越快）
+
+            function typeWriter() {
+                // 檢查是否所有字元都已顯示完畢
+                if (charIndex < textToType.length) {
+                    // 將下一個字元添加到 HTML 元素中
+                    $targetElement.append(textToType.charAt(charIndex));
+                
+                    // 索引移動到下一個字元
+                    charIndex++;
+                
+                    // 設定定時器，在 typingSpeed 毫秒後再次呼叫 typeWriter 函式
+                    setTimeout(typeWriter, typingSpeed);
+                } else {
+                    // 當文字全部打完後，為元素添加類別以移除游標
+                    $targetElement.addClass("finished-typing");
+                }
+            }
+
+            // 啟動打字機效果
+            typeWriter();
+        });
+    </script>
 </body>
 </html>
