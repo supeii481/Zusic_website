@@ -46,11 +46,11 @@ nav li a:hover {
     display: flex;
     padding: 1%;
 }
-.header_icon a, .user_icon {
+#cart_icon, .user_icon {
     color: #2B4C7C;
     font-size: 25px;
 }
-.user_icon, .cart_icon {
+.user_icon, #cart_icon {
     display: flex;/* 每個圖示字元所佔據的字元寬度在字體檔案中是不同的,確保這兩個 icon 的邊框框起來是完美的、統一的正方形 */
     align-items: center;
     justify-content: center;
@@ -59,7 +59,7 @@ nav li a:hover {
     padding: 20px;
     margin: 4px;
 }
-.user_icon:hover, .cart_icon:hover {
+.user_icon:hover, #cart_icon:hover {
     color: #EE9F30;
     /* box-shadow: 0 0 0 3px #EE9F30; 用 box-shadow 取代 border才不用有flexbox因尺寸變化產生抖動問題  */
     border-radius: 20%;
@@ -84,7 +84,7 @@ header .footer_icon {
         font-size: 19px;
         margin: .7em;
     }
-    .cart_icon, .user_icon {
+    #cart_icon, .user_icon {
         padding: 20px; /* 讓icon跟border距離加大 */
         margin: 6px;
     }
@@ -100,7 +100,7 @@ header .footer_icon {
         font-size: 17px;
         margin: .6em;
     }
-    .header_icon a, .user_icon {
+    #cart_icon, .user_icon {
         padding: 0;
         margin: 5px;
     }

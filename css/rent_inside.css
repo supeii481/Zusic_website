@@ -12,6 +12,10 @@ body {
     display: flex;
     margin: 2em 1em;
 }
+.bread_crumbs li {
+    display: flex;
+    align-items: center;
+}
 .bread_crumbs a {
     margin: 1em 0;
     font-size: 20px;
@@ -19,6 +23,7 @@ body {
     color: black;
     letter-spacing: 0.24em;
     padding: 0;
+    justify-content: center;
 }
 .now a {
     color: #EE9F30;
@@ -48,7 +53,7 @@ body {
     margin: 1em 0.5em;
     padding: 0;
 }
-.container h2 {
+.container .producth2 {
     display: inline-block;
     padding: 0;
     margin: 1.25em 1em;
@@ -98,13 +103,13 @@ body {
     column-gap: 1em;
 }
 .else_img img {
-    width: 150px;
+    width: 120px;
     background-color: #ffffff55;
     border: 1px solid rgba(128, 128, 128, 0.491);
 }
 .commodity_text {
     border: 1px solid gray;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 .commodity_text h2 {
     padding: 0;
@@ -224,4 +229,127 @@ td:hover {
 }
 article {
     margin-bottom: 6em;
+}
+.choose_color .color button.selected {
+    border: 3px solid #EE9F30; /* 例如：使用重點色作為邊框 */
+    box-shadow: 0 0 5px rgba(238, 159, 48, 0.5); /* 添加陰影效果 */
+}
+/*  RWD */
+@media screen and (max-width:1024px) {
+    #rent_inside {
+        margin-top: 110px;
+    }
+    .else_img img {
+        width: 100px;
+    }
+    input {
+        font-size: 18px;
+    }
+    .black, .white, .transparent {
+        width: 30px;
+        height: 30px;
+    }
+    .introduce_wrap p {
+        font-size: 25px;
+    }
+    .another_wrap {
+        flex-wrap: nowrap;
+    }
+    .bread_crumbs ol {
+        margin: 0 0 0 1em;
+    }
+    #rent_inside h1 {
+        margin: 10px .5em;
+    }
+    th {
+        padding: 5px;
+        height: 70px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .another_wrap .card-list {
+        justify-content: space-between;
+    }
+    .card-list .card {
+        width: 20%;
+    }
+}
+@media screen and (max-width:810px) {
+    #rent_inside {
+        margin-top: 80px;
+    }
+    .bread_crumbs a {
+        font-size: 17px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+    .bread_crumbs li + li::before {
+        margin: 0 10px;
+    }
+    .commodity {
+        flex-direction: column;
+    }
+    .commodity_img {
+        width: 70%;
+        align-self: center;
+    }
+    .main_img {
+        width: 400px;
+        margin: 0;
+    }
+    .commodity_text {
+        margin-top: 20px;
+        width: 80%;
+        align-self: center;
+    }
+    .introduce_wrap p {
+        font-size: 20px;
+    }
+    table {
+        width: 90%;
+    }
+    th {
+        font-size: 17px;
+    }
+    .another_wrap .card-list {
+        justify-content: center;
+    }
+    .card-list .card {
+        width: 33%;
+    }
+}
+@media screen and (max-width:430px) {
+    #rent_inside {
+        margin-top: 50px;
+    }
+    .bread_crumbs a {
+        font-size: 10px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+    }
+    .main_img {
+        width: 250px;
+    }
+    .commodity_text {
+        margin-top: 20px;
+        width: 100%;
+        align-self: center;
+    }
+    .commodity_text h2 {
+        padding: 0;
+        margin-top: 1em;
+    }
+    .commodity_text p, .date .normal-p {
+        margin: 0 22px 1em 22px;
+    }
+    th {
+        font-size: 14px;
+        padding: 0;
+    }
+    .card-list .card {
+        width: 160px;
+    }
+}
+@media screen and (max-width:390px) {
+    
 }
