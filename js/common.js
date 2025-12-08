@@ -51,8 +51,8 @@ window.addEventListener("load", init, false);
 // 圖片路徑映射表：將顏色名稱對應到實際的圖片檔名
 // 假設您的圖片檔名規則是： piano_[顏色名稱].png
 const colorImageMap = {
-    "black": "piano1.png",
-    "white": "piano2.png",
+    "black": "img/rent_inside/piano_big1.png",
+    "white": "../img/rent_inside/piano2.png",
     "transparent": "piano3.png"
     // 請根據您的實際圖片路徑調整這裡
 };
