@@ -67,6 +67,7 @@ body {
 }
 .filter {
     color: gray;
+    background-color: white;
     /* appearance: none; */
 }
 /* pagenumber */
