@@ -384,12 +384,12 @@ input, textarea, select{
     top: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
-    padding: 10px;
+    padding: 10%;
 }
 /* RWD-燈箱 */
 @media screen and (max-width:430px) {
     #lightbox>article {
         width: 300px;
-        padding: 5px;
+        padding: 30px 1.5%;
     }
 }
