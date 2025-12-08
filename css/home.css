@@ -1237,6 +1237,10 @@
     animation-duration: 5s;
     animation-delay: -1.5s;           
 }
+.blob4 {
+    animation-duration: 6s;
+    animation-delay: 1.0s;
+}
 
 /* 評論向左滾動動畫 
 @keyframes scroll-left {
