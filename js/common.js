@@ -112,7 +112,7 @@ function init() {
 }
 
 window.addEventListener("load", init, false);
-//
+
 // 淡入
 document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//燈箱//
+//燈箱
 $(".user_icon").on("click", function () {
     $("#lightbox").removeClass("none");
 });
