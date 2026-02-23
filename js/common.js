@@ -30,7 +30,7 @@ const cartBtn = document.getElementById('cart_icon');
 // 2. 為按鈕添加點擊事件監聽器 (Event Listener)
 cartBtn.addEventListener('click', function () {
     // 3. 點擊後執行 alert 函式
-    alert('請先加入商品~');
+    alert('功能開發中，敬請期待~');
 });
 
 //點小圖秀大圖
@@ -152,3 +152,60 @@ $("#lightbox").on("click", function () {
 $("#lightbox > article").on("click", function (e) {
     e.stopPropagation();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. 取得需要的元素
+    const addCartBtn = document.querySelector('.addcart_btn .normal_btn');
+    const cartCountSpan = document.getElementById('cart_count');
+    
+    let currentCount = 0; // 初始購物車數量
+
+    if (addCartBtn && cartCountSpan) {
+        addCartBtn.addEventListener('click', function() {
+            // 2. 數量累加
+            currentCount++;
+            
+            // 3. 更新介面
+            cartCountSpan.textContent = currentCount;
+            
+            // 4. 如果數量大於 0，確保標籤是顯示狀態 (原本可能是 display: none)
+            if (currentCount > 0) {
+                cartCountSpan.style.display = 'flex';
+            }
+
+            // 5. (進階) 增加一點動效，讓使用者感覺到「被加入了」
+            cartCountSpan.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                cartCountSpan.style.transform = 'scale(1)';
+            }, 200);
+
+            // 原有的 alert 也可以保留
+            // alert('商品已加入購物車！');
+        });
+    }
+});
+
+// 針對登入按鈕點擊事件
+const loginSubmitBtn = document.querySelector('#login .normal_btn');
+
+if (loginSubmitBtn) {
+    loginSubmitBtn.addEventListener('click', function(e) {
+        // 1. 防止表單預設的送出行為（避免頁面重新整理）
+        e.preventDefault();
+
+        // 2. 彈出警告視窗
+        alert('功能開發中，敬請期待~');
+    });
+}
+
+// 針對社群登入圖示
+const socialIcons = document.querySelector('.social_media_icon');
+
+if (socialIcons) {
+    socialIcons.addEventListener('click', function(e) {
+        // 檢查點擊的是否為圖片
+        if (e.target.tagName === 'IMG') {
+            alert('功能開發中，敬請期待~');
+        }
+    });
+}

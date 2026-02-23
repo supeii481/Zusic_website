@@ -443,3 +443,28 @@ footer nav {
         font-size: 12px;
     }
 }
+/* 讓按鈕變成相對定位，方便數字定位 */
+#cart_icon {
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* 購物車數字標籤樣式 */
+.cart-badge {
+    position: absolute;
+    top: -5px;      /* 調整上下位置 */
+    right: -5px;    /* 調整左右位置 */
+    background-color: #e74c3c; /* 醒目的紅色 */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

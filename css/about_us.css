@@ -96,13 +96,13 @@ form {
     margin: 0.5em 0;
     width: 100%;
 }
-.form-group label {
+#about .form-group label {
     display: block;
     font-size: 25px; /* 調整 label 文字大小 */
     color: #2B4C7C;
     margin-bottom: 0.5em; /* 增加標籤與輸入框間距 */
 }
-.form-group input, textarea {
+#about .form-group input, textarea {
     box-sizing: border-box;
     width: 100%;
     display: block;
